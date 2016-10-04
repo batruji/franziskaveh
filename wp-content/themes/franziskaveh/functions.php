@@ -102,15 +102,38 @@ add_action( 'widgets_init', 'franziskaveh_widgets_init' );
  * Enqueue scripts and styles.
  */
 function franziskaveh_scripts() {
+	wp_enqueue_style( 'google-material-icons', 'http://fonts.googleapis.com/icon?family=Material+Icons', false );
+
+	wp_enqueue_style( 'google-material-icons', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic', false );
+
+	wp_enqueue_style( 'animate', get_stylesheet_directory_uri() . '/css/animate.css' );
+
+	wp_enqueue_style( 'bricklayer', get_stylesheet_directory_uri() . '/css/bricklayer.css' );
+
+	wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css' );
+
+	wp_enqueue_style( 'materialize', get_stylesheet_directory_uri() . '/css/materialize.min.css' );
+
 	wp_enqueue_style( 'franziskaveh-style', get_stylesheet_uri() );
+
+	/* SCRIPTS */
+
+	if ( !is_admin() ){
+		wp_deregister_script( 'jquery' );
+		wp_enqueue_script( 'jquery', get_stylesheet_directory_uri() . '/js/jquery-2.1.1.min.js', array(), '2.1.1', 1 );
+	}
 
 	wp_enqueue_script( 'franziskaveh-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'franziskaveh-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	wp_enqueue_script( 'materialize', get_stylesheet_directory_uri() . '/js/materialize.min.js', array( 'jquery' ), '0.97.6', 1 );
+
+	wp_enqueue_script( 'jquery-viewportchecker', get_stylesheet_directory_uri() . '/js/jquery.viewportchecker.min.js', array( 'jquery' ), '1.8.7', 1 );
+
+	wp_enqueue_script( 'bricklayer', get_stylesheet_directory_uri() . '/js/bricklayer.js', array( 'jquery' ), '1', 1 );
+
+	wp_enqueue_script( 'franzi-custom', get_stylesheet_directory_uri() . '/js/franzi-custom.js', array( 'jquery' ), '1', 1 );
 }
 add_action( 'wp_enqueue_scripts', 'franziskaveh_scripts' );
 
@@ -138,3 +161,5 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+add_filter('show_admin_bar', '__return_false');

@@ -14,43 +14,54 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<header>
+    <a href="/">
+        <h1>Franziska Veh</h1>
+    </a>
+    <?php get_template_part( 'template-parts/filters' ); ?>
+</header>
 
-		<?php
-		if ( have_posts() ) :
+<div class="container">
+	<?php $active_category = 'filter' ?>
+	<?php include( locate_template( 'template-parts/navigation.php' ) ); ?>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+	<div class="top-header-wrap show valign-wrapper row">
+		<h2>
+			Franziska is an Berlin based Art Director, with a focus on branding and data vizualisation.
+		</h2>
+	</div>
 
-			<?php
-			endif;
+	<!-- Grid layer for displaying projects -->
+	<div id="bricklayer" class="bricklayer two-columns">
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+        <?php
+            $args = array(
+                'posts_per_page' => -1,
+                'post_status'    => 'publish',
+                'post_type'      => 'project',
+                'orderby'        => 'date',
+                'order'          => 'desc',
+                'fields'         => 'ids'
+            );
+            $loop = new WP_Query( $args );
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+            while ( $loop->have_posts() ) : $loop->the_post();
 
-			endwhile;
+        ?>
 
-			the_posts_navigation();
+        <div class="project-item columns-2 animation-element bounce-up in-view">
+            <a href="<?= get_the_permalink() ?>" title="<?= the_title() ?>"></a>
+            <?= get_the_post_thumbnail() ?>
+            <h4><?php echo types_render_field( 'category-title', array( 'id' => get_the_ID() ) ); ?></h4>
+            <h2><?= the_title(); ?></h2>
+            <p class="project-info"><?= get_the_excerpt() ?></p>
+        </div>
 
-		else :
+        <?php endwhile; ?>
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div>
+	<!-- End of Grid layer -->
+</div>
 
 <?php
-get_sidebar();
 get_footer();

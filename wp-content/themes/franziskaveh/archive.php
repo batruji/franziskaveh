@@ -7,45 +7,48 @@
  * @package Franziska_Veh
  */
 
-get_header(); ?>
+get_header();
+?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<header>
+	<a href="/">
+		<h1>Franziska Veh</h1>
+	</a>
+	<?php get_template_part( 'template-parts/filters' ); ?>
+</header>
+
+<div class="container category-page">
+	<?php $active_category = single_cat_title( '', false ); ?>
+	<?php include( locate_template( 'template-parts/navigation.php' ) ); ?>
+
+	<div class="top-header-wrap show valign-wrapper row">
+		<h2>
+			<?= category_description(); ?>
+		</h2>
+	</div>
+
+	<div id="bricklayer" class="bricklayer three-columns">
+		<?php
+			if ( have_posts() ) :
+
+			while ( have_posts() ) : the_post();
+		?>
+			<div class="project-item animation-element bounce-up in-view">
+				<a href="<?= get_the_permalink() ?>" title="<?= the_title() ?>"></a>
+				<?= get_the_post_thumbnail() ?>
+				<h4><?php echo types_render_field( 'category-title', array( 'id' => get_the_ID() ) ); ?></h4>
+				<h2><?= the_title(); ?></h2>
+				<p class="project-info"><?= get_the_excerpt() ?></p>
+			</div>
 
 		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
 			endwhile;
 
-			the_posts_navigation();
+			endif;
+		?>
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div>
+</div>
 
 <?php
-get_sidebar();
 get_footer();
