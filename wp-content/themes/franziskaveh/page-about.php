@@ -6,24 +6,7 @@
  */
 
 get_header();
-
-$about_page_color = types_render_field( 'about-page-color', array( 'id' => get_the_ID() ) );
 ?>
-
-<style>
-    .about .projects-component p,
-    .about .projects-component p a,
-    .about .projects-component p a:hover,
-    .about .projects-component p a:focus,
-    #btn-about.activated a,
-    .about h4,
-    .about .col p, .about .projects-component {
-        color: <?= $about_page_color ?>;
-    }
-    #btn-about.activated .bottom-border {
-        background-color: <?= $about_page_color ?>;
-    }
-</style>
 
 <div class="container about">
     <?php $activated = 'about'; ?>

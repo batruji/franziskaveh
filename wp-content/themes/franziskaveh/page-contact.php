@@ -6,19 +6,7 @@
  */
 
 get_header();
-
-$contact_page_color = types_render_field( 'contact-page-color', array( 'id' => get_the_ID() ) );
 ?>
-
-<style>
-    .contact h2, .contact a,
-    #btn-contact.activated a {
-        color: <?= $contact_page_color ?>;
-    }
-    #btn-contact.activated .bottom-border {
-        background-color: <?= $contact_page_color ?>;
-    }
-</style>
 
 <div class="container">
     <?php $activated = 'contact'; ?>

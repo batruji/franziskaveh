@@ -16,7 +16,11 @@ get_header();
 
 	<div class="top-header-wrap show valign-wrapper row">
 		<h2>
-			<?= category_description(); ?>
+			<?php if ( category_description() ):; ?>
+				<?= strip_tags ( category_description() ); ?>
+			<?php else: ?>
+				<?php echo types_render_field( 'all-categories-title', array( 'id' => '32' ) ); ?>
+	        <?php endif; ?>
 		</h2>
 	</div>
 
