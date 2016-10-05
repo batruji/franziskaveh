@@ -73,7 +73,7 @@ a {
 }
 .main-buttons#btn-work {
 	top: 20px;
-	left: 25px;
+	left: 32px;
 }
 .main-buttons#btn-work .button-text:hover .bottom-border {
 	width: 100%;
@@ -113,18 +113,18 @@ a {
 }
 .main-buttons#btn-about {
 	top: 20px;
-	right: 25px;
+	right: 32px;
 }
 .main-buttons:hover .bottom-border {
 	width: 100%;
 }
 .main-buttons#btn-news {
 	bottom: 20px;
-	left: 25px;
+	left: 32px;
 }
 .main-buttons#btn-contact {
 	bottom: 20px;
-	right: 25px;
+	right: 32px;
 }
 .bottom-border {
 	display: block;

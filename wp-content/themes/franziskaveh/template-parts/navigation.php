@@ -2,7 +2,7 @@
 /** @var $activated */
 /** @var $active_category */
 
-$categories = get_categories( array ( 'hide_empty'   => 0 ) );
+$categories = get_categories( array ( 'hide_empty' => 0, 'orderby' => 'id', 'order' => 'asc', 'include' => '2, 3, 4, 5' ) );
 ?>
 
 <!-- Main buttons on desktop -->

@@ -1,6 +1,4 @@
-<?php
-    $categories = get_categories( array ( 'hide_empty'   => 0 ) );
-?>
+<?php $categories = get_categories( array ( 'hide_empty' => 0, 'orderby' => 'id', 'order' => 'asc', 'include' => '2, 3, 4, 5' ) ); ?>
 
 <div id="desktop-filter-elements" class="filter-elements row">
     <div class="container">
