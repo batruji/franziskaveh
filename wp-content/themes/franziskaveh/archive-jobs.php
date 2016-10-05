@@ -20,29 +20,31 @@ get_header();
 		</h2>
 	</div>
 
-	<div class="row">
-		<?php
-			if ( have_posts() ) :
+	<div class="container">
+		<div class="row">
+			<?php
+				if ( have_posts() ) :
 
-			while ( have_posts() ) : the_post();
-			$subtitle = types_render_field( 'subtitle', array( 'id' => get_the_ID() ) );
-		?>
-			<div class="jobs-entry">
-				<h4><?= the_title() ?></h4>
+				while ( have_posts() ) : the_post();
+				$subtitle = types_render_field( 'subtitle', array( 'id' => get_the_ID() ) );
+			?>
+				<div class="jobs-entry">
+					<h4><?= the_title() ?></h4>
 
-				<?php if ( $subtitle ): ?>
-					<h3><?php echo $subtitle; ?></h3>
-				<?php endif; ?>
+					<?php if ( $subtitle ): ?>
+						<h3><?php echo $subtitle; ?></h3>
+					<?php endif; ?>
 
-				<?= the_content() ?>
-			</div>
+					<?= the_content() ?>
+				</div>
 
-		<?php
-			endwhile;
+			<?php
+				endwhile;
 
-			endif;
-		?>
+				endif;
+			?>
 
+		</div>
 	</div>
 </div>
 
