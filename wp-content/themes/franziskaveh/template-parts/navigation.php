@@ -47,11 +47,7 @@ $categories = get_categories( array ( 'hide_empty'   => 0 ) );
         </div>
         <div class="controls-btn">
 
-            <div class="controls-btn">
-                <div class="inner-link">
-                    <a href="/" class="button-text"> Work </a>
-                </div>
-            </div>
+            <a href="/" class="button-text"> Work </a>
 
             <p class="filter-text">Filter By:</p>
             <div class="mobile-filter-wrap">
@@ -59,7 +55,7 @@ $categories = get_categories( array ( 'hide_empty'   => 0 ) );
                 <div class="filter-element-item col l2 s4" style="padding-left: 0">
                     <div class="filter-element-image">
                         <a href="<?= site_url( 'project' ) ?>">
-                            <img alt="something" src="/wp-content/uploads/2016/10/FV_smw_1600x920_03.jpg" >
+                            <?= types_render_field( 'all-categories-thumbnail', array( 'id' => '32' ) ) ?>
                         </a>
                     </div>
                     <div class="valign-wrapper">
@@ -76,7 +72,9 @@ $categories = get_categories( array ( 'hide_empty'   => 0 ) );
                         </a>
                     </div>
                     <div class="valign-wrapper">
-                        <a href="<?= get_category_link( $category->term_id ) ?>"><h5 class="center-align valign">identity</h5></a>
+                        <a href="<?= get_category_link( $category->term_id ) ?>">
+                            <h5 class="center-align valign"><?= $category->name ?></h5>
+                        </a>
                     </div>
                 </div>
 
@@ -86,33 +84,38 @@ $categories = get_categories( array ( 'hide_empty'   => 0 ) );
         </div>
 
         <div class="controls-btn <?php if ( $activated == 'about' ): ?>activated<?php endif; ?>">
-            <div class="inner-link">
-                <a href="<?= site_url( 'about' ) ?>" class="button-text"> About </a>
-            </div>
+            <a href="<?= site_url( 'about' ) ?>" class="button-text"> About </a>
         </div>
 
         <div class="controls-btn">
-            <div class="inner-link">
-                <a href="https://instagram.com/franziskaveh" target="_blank" class="button-text"> News </a>
-            </div>
+            <a href="https://instagram.com/franziskaveh" target="_blank" class="button-text"> News </a>
         </div>
 
         <div class="controls-btn <?php if ( $activated == 'contact' ): ?>activated<?php endif; ?>">
-            <div class="inner-link">
-                <a href="<?= site_url( 'contact' ) ?>" class="button-text"> Contact </a>
-            </div>
+            <a href="<?= site_url( 'contact' ) ?>" class="button-text"> Contact </a>
         </div>
 
-        <div class="controls-btn">
-            <div class="inner-link">
+        <?php
+            // do we have active Job offers?
+            $args = array(
+                'posts_per_page' => -1,
+                'post_status'    => 'publish',
+                'post_type'      => 'jobs',
+                'fields'         => 'ids'
+            );
+            $loop = new WP_Query( $args );
+
+            if ( $loop->have_posts() ):
+        ?>
+
+            <div class="controls-btn">
                 <a href="<?= site_url( 'jobs' ) ?>" class="button-text"> Jobs </a>
             </div>
-        </div>
+
+        <?php endif; ?>
 
         <div class="controls-btn">
-            <div class="inner-link">
-                <a href="<?= site_url( 'imprint' ) ?>" class="button-text"> Imprint </a>
-            </div>
+            <a href="<?= site_url( 'imprint' ) ?>" class="button-text"> Imprint </a>
         </div>
 
     </div>

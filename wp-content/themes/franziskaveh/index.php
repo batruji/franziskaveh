@@ -14,21 +14,12 @@
 
 get_header(); ?>
 
-<header>
-    <a href="/">
-        <h1>Franziska Veh</h1>
-    </a>
-    <?php get_template_part( 'template-parts/filters' ); ?>
-</header>
-
 <div class="container">
 	<?php $active_category = 'filter' ?>
 	<?php include( locate_template( 'template-parts/navigation.php' ) ); ?>
 
 	<div class="top-header-wrap show valign-wrapper row">
-		<h2>
-			Franziska is an Berlin based Art Director, with a focus on branding and data vizualisation.
-		</h2>
+		<h2><?= types_render_field( 'index-page-title', array( 'id' => '32' ) ) ?></h2>
 	</div>
 
 	<!-- Grid layer for displaying projects -->

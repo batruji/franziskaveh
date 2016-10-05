@@ -9,7 +9,7 @@
             <div class="filter-element-item col l2">
                 <div class="filter-element-image">
                     <a href="<?= site_url( 'project' ) ?>">
-                        <img alt="all categories" src="/wp-content/uploads/2016/10/FV_smw_1600x920_03.jpg">
+                        <?= types_render_field( 'all-categories-thumbnail', array( 'id' => '32' ) ) ?>
                     </a>
                 </div>
                 <div class="valign-wrapper">

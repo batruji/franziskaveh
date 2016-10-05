@@ -10,13 +10,6 @@
 get_header();
 ?>
 
-<header>
-	<a href="/">
-		<h1>Franziska Veh</h1>
-	</a>
-	<?php get_template_part( 'template-parts/filters' ); ?>
-</header>
-
 <div class="container category-page">
 	<?php $active_category = single_cat_title( '', false ); ?>
 	<?php include( locate_template( 'template-parts/navigation.php' ) ); ?>

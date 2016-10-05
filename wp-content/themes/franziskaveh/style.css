@@ -115,22 +115,16 @@ a {
 	top: 20px;
 	right: 25px;
 }
-.main-buttons#btn-about:hover .bottom-border {
+.main-buttons:hover .bottom-border {
 	width: 100%;
 }
 .main-buttons#btn-news {
 	bottom: 20px;
 	left: 25px;
 }
-.main-buttons#btn-news:hover .bottom-border {
-	width: 100%;
-}
 .main-buttons#btn-contact {
 	bottom: 20px;
 	right: 25px;
-}
-.main-buttons#btn-contact:hover .bottom-border {
-	width: 100%;
 }
 .bottom-border {
 	display: block;
@@ -154,30 +148,14 @@ a {
 	}
 }
 
-/* @todo on Project page */
-.project-page #btn-work .bottom-border, .category-page #btn-work .bottom-border {
+.project-page #btn-work .bottom-border,
+.category-page #btn-work .bottom-border {
 	width: 100%;
 }
 
-#btn-about.activated a {
-	color: #3cb737;
-}
-#btn-about.activated .bottom-border {
-	width: 100%;
-	background-color: #3cb737;
-}
-#btn-contact.activated a {
-	color: #c72e00;
-}
+#btn-about.activated .bottom-border,
 #btn-contact.activated .bottom-border {
 	width: 100%;
-	background-color: #c72e00;
-}
-
-.inner-link {
-	float: left;
-	margin-left: 15px;
-	margin-bottom: 5px;
 }
 
 .mobile .toggle-menu-button {
@@ -190,10 +168,12 @@ a {
 
 .controls-btn{
 	clear: both;
+	margin: 0 15px 5px 15px;
 }
 
 .controls-btn.close-btn{
 	margin-top: 30px;
+	float: left;
 }
 .mobile .toggle-menu-button.show {
 	display: inherit;
@@ -212,10 +192,12 @@ a {
 	top: 0;
 	left: -100%;
 	transition: ease all 0.3s;
+	visibility: hidden;
 }
 .mobile .controls.show {
 	left: 0;
 	z-index: 220;
+	visibility: visible;
 }
 .mobile .controls .controls-btn .button-text {
 	font-family: "Zirkon-Heavy", sans-serif;
@@ -223,7 +205,7 @@ a {
 }
 
 .mobile .controls .filter-text {
-	padding: 0 0 6px 15px;
+	padding: 0 0 6px 0;
 	margin: 0;
 	font-family: "Zirkon-Light", sans-serif;
 	text-transform: uppercase;
@@ -233,7 +215,6 @@ a {
 .mobile .controls .mobile-filter-wrap {
 	white-space: nowrap;
 	overflow: auto;
-	padding: 0 15px;
 	width: 100%;
 }
 .mobile .controls .mobile-filter-wrap::-webkit-scrollbar {
@@ -251,7 +232,7 @@ a {
 .mobile .controls #cross {
 	width: 25px;
 	height: 25px;
-	margin: 10px;
+	margin: 10px 0;
 	position: inherit;
 	transform: rotate(45deg);
 	background: linear-gradient(to bottom, transparent 48%, #2f2f2f 48%, #2f2f2f 52%, transparent 52%), linear-gradient(to right, transparent 48%, #2f2f2f 48%, #2f2f2f 52%, transparent 52%);
@@ -458,7 +439,6 @@ header .filter-elements.show {
 }
 
 .contact h2, .contact a {
-	color: #c72e00;
 	text-align: center;
 	font-family: "Zirkon-Heavy", sans-serif;
 	font-size: 24px;
@@ -505,34 +485,39 @@ header .filter-elements.show {
 	}
 }
 
-.about h4{
-	color: #3cb737;
+.about h4 {
 	font-size: 28px;
 	font-family: "Zirkon-Heavy", sans-serif;
 	text-align: center;
 }
 
-.about .col p {
-	color: #3cb737;
+.about .col p, .about .projects-component {
 	font-size: 22px;
 	line-height: 32px;
 	font-family: "Times", sans-serif;
 }
 
-.about p.projects-component .desc a {
+.about .projects-component {
+	margin: 22px 0;
+}
+
+.about .projects-component p {
+	margin: 0;
+}
+
+.about .projects-component p a {
 	text-decoration: underline;
 }
 
-.about p.projects-component .desc, .about p.projects-component .desc a, .about p.projects-component .desc a:hover, .about p.projects-component .desc a:focus {
+.about .projects-component p, .about .projects-component p a, .about .projects-component p a:hover, .about .projects-component p a:focus {
 	text-transform: uppercase;
 	font-family: "Zirkon-Regular", sans-serif;
 	font-size: 14px;
 	line-height: 24px;
 	letter-spacing: 2px;
-	color: #3cb737;
 }
 
-.about p.projects-component .title{
+.about .projects-component .title {
 	font-size: 22px;
 	line-height: 32px;
 	font-family: "Times", sans-serif;
@@ -543,16 +528,16 @@ header .filter-elements.show {
 		font-size: 17px;
 		line-height: 23px;
 	}
-	.about .col p {
+	.about .col p, .about .projects-component {
 		font-size: 16px;
 		line-height: 20px;
 	}
-	.about p.projects-component .title {
+	.about .projects-component .title {
 		font-size: 16px;
 		line-height: 20px;
 	}
 
-	.about p.projects-component .desc, .about p.projects-component .desc a, .about p.projects-component .desc a:hover, .about p.projects-component .desc a:focus {
+	.about .projects-component p, .about .projects-component p a, .about .projects-component p a:hover, .about .projects-component p a:focus {
 		font-size: 11px;
 		line-height: 17px;
 	}
@@ -905,15 +890,15 @@ header .filter-elements.show {
 	}
 }
 
-body.imprint .filter-button, body.jobs .filter-button {
+body.page-template-default .filter-button, body.post-type-archive-jobs .filter-button {
 	display: none;
 }
 
-body.imprint {
+body.page-template-default {
 	background: #c5c6c1;
 }
 
-body.imprint .top-header-wrap h2.col, body.jobs .top-header-wrap h2.col {
+body.page-template-default .top-header-wrap h2.col, body.post-type-archive-jobs .top-header-wrap h2.col {
 	font-family: "Zirkon-Heavy", sans-serif;
 }
 
@@ -949,7 +934,7 @@ body.imprint .top-header-wrap h2.col, body.jobs .top-header-wrap h2.col {
 	cursor: pointer;
 }
 
-body.jobs {
+body.post-type-archive-jobs {
 	background: #f5fada;
 }
 

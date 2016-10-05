@@ -9,12 +9,6 @@
 
 get_header(); ?>
 
-<header>
-	<a href="/">
-		<h1 class="fixed">Franziska Veh</h1>
-	</a>
-</header>
-
 <div class="container digital project-page">
 	<?php include( locate_template( 'template-parts/navigation.php' ) ); ?>
 
