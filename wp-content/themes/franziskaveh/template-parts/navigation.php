@@ -68,7 +68,7 @@ $categories = get_categories( array ( 'hide_empty' => 0, 'orderby' => 'id', 'ord
                 <div class="filter-element-item col l2 s4">
                     <div class="filter-element-image">
                         <a href="<?= get_category_link( $category->term_id ) ?>">
-                            <?php if (function_exists( 'z_taxonomy_image') ) z_taxonomy_image( $category->term_id ); ?>
+                            <?php if (function_exists( 'z_taxonomy_image') ) z_taxonomy_image( $category->term_id, 'filter-image' ); ?>
                         </a>
                     </div>
                     <div class="valign-wrapper">

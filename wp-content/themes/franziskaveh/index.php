@@ -42,7 +42,7 @@ get_header(); ?>
 
         <div class="project-item columns-2 animation-element bounce-up in-view">
             <a href="<?= get_the_permalink() ?>" title="<?= the_title() ?>"></a>
-            <?= get_the_post_thumbnail() ?>
+            <?= get_the_post_thumbnail( null, 'half-size' ) ?>
             <h4><?php echo types_render_field( 'category-title', array( 'id' => get_the_ID() ) ); ?></h4>
             <h2><?= the_title(); ?></h2>
             <p class="project-info"><?= get_the_excerpt() ?></p>

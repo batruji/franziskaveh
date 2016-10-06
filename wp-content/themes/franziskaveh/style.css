@@ -8,16 +8,6 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: franziskaveh
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Franziska Veh is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 @font-face {
@@ -736,26 +726,28 @@ header .filter-elements.show {
 	}
 }
 
+.col.full {
+	padding: 0 0.75rem 40px 0.75rem;
+	clear: both;
+}
+
 .col.left {
-	padding: 0 40px 40px 0;
+	padding: 0 40px 40px 0.75rem;
 }
 .about .col.left {
 	padding: 0 30px 0 0;
 }
 
 .col.right {
-	padding: 0 0 40px 40px;
+	padding: 0 0.75rem 40px 40px;
 }
 .about .col.right {
 	padding: 0 0 0 30px;
 }
 
 @media only screen and (max-width: 600px) {
-	.col.left, .col.right {
-		padding: 0 0.75rem
-	}
-
-	.col.left {
+	.col.left, .col.right, .col.full {
+		padding: 0 0.75rem;
 		margin-bottom: 15px;
 	}
 }

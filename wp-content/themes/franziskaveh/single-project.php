@@ -21,7 +21,7 @@ get_header(); ?>
 
 	<div class="row">
 		<div class="col s12 l12 m12 pad in-view">
-			<?= get_the_post_thumbnail() ?>
+			<?= get_the_post_thumbnail( null, 'full-size' ) ?>
 
 			<div class="type col s12 m12 l12"><?php echo types_render_field( 'category-title', array( 'id' => get_the_ID() ) ); ?></div>
 
@@ -33,17 +33,23 @@ get_header(); ?>
 	</div>
 
 	<?php
-		$images = types_render_field( 'gallery-image', array( 'id' => get_the_ID(), 'separator' => '###' ) );
-	 	$image_array = explode( '###', $images );
+		$images = get_field( 'gallery_image' );
 
-		if ( ! empty( $image_array ) ):
+		if ( ! empty( $images ) ):
 	?>
 
 
 	<div class="row">
-		<?php foreach ( $image_array as $index => $image ): ?>
-			<div class="<?= $index % 2 == 0 ? 'left' : 'right' ?> col s12 l6 m6 to-animate">
-				<?= $image ?>
+		<?php foreach ( $images as $image ): ?>
+			<?php
+				$size = $image['image_size'] == 'full' ? 'full-size' : 'half-size';
+				$img_src = wp_get_attachment_image_url( $image['image']['id'], $size );
+				$img_srcset = wp_get_attachment_image_srcset( $image['image']['id'], $size );
+			?>
+			<div class="<?= $image['image_size'] ?> col s12 <?php if ( $image['image_size'] != 'full' ): ?>l6 m6<?php endif; ?> to-animate">
+				<img src="<?php echo esc_url( $img_src ); ?>"
+					 srcset="<?php echo esc_attr( $img_srcset ); ?>"
+					 alt="<?= $image['image']['alt']; ?>">
 			</div>
 		<?php endforeach; ?>
 	</div>
