@@ -108,9 +108,9 @@ $(function(){
     });
 
     $( '.filter-element-item' ).hover( function() {
-        $( this ).find( 'h5 .bottom-border' ).css( { width: "100%"} );
+        $( this ).find( 'h5:not(.no-hover) .bottom-border' ).css( { width: "100%"} );
     }, function(){
-        $( this ).find( '.bottom-border' ).css( "width", "0" );
+        $( this ).find( 'h5:not(.no-hover) .bottom-border' ).css( "width", "0" );
     });
 
 });

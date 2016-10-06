@@ -124,6 +124,15 @@ a {
 	transition: ease all 0.3s;
 }
 
+body.home .valign-wrapper.category-all .bottom-border,
+body.category-2 .valign-wrapper.category-2 .bottom-border,
+body.category-3 .valign-wrapper.category-3 .bottom-border,
+body.category-4 .valign-wrapper.category-4 .bottom-border,
+body.category-5 .valign-wrapper.category-5 .bottom-border
+{
+	width: 100%;
+}
+
 .valign-wrapper .bottom-border {
 	margin-top: 3px;
 }
@@ -138,8 +147,9 @@ a {
 	}
 }
 
-.project-page #btn-work .bottom-border,
-.category-page #btn-work .bottom-border {
+body.single-project #btn-work .bottom-border,
+body.category #btn-work .bottom-border,
+body.home #btn-work .bottom-border {
 	width: 100%;
 }
 
@@ -538,11 +548,11 @@ header .filter-elements.show {
 	font-size: 28px;
 }
 
-.digital .pad {
+body.single-project .pad {
 	padding-bottom: 80px;
 }
 
-.digital .filter-button, .digital .filter-text, .digital .mobile-filter-wrap {
+body.single-project .filter-button, body.single-project .filter-text, body.single-project .mobile-filter-wrap {
 	display: none;
 }
 
@@ -550,22 +560,22 @@ header .filter-elements.show {
 	width: 100%;
     height: auto;
 }
-.digital .col p {
+body.single-project .col p {
 	text-align: center;
 	font-family: "Times", sans-serif;
 	font-size: 22px;
 }
 
-.digital .credits {
+body.single-project .credits {
 	margin-bottom: 0;
 	margin-top: 0;
 	line-height: 32px;
     padding-top:0;
 }
-.digital .credits p {
+body.single-project .credits p {
     margin: 0;
 }
-.digital .col .type {
+body.single-project .col .type {
 	padding: 55px 0 20px 0;
 	letter-spacing: 2px;
 	font-size: 14px;
@@ -619,7 +629,7 @@ header .filter-elements.show {
 }
 
 @media only screen and (max-width: 600px) {
-	.digital .col p {
+	body.single-project .col p {
 		font-size: 16px;
 		line-height: 20px;
 	}
@@ -629,9 +639,9 @@ header .filter-elements.show {
 	.back a {
 		font-size: 25px;
 	}
-	.digital .col p .type {
+	body.single-project .col .type {
 		font-size: 11px;
-		padding: 0 0 10px 0;
+		padding: 30px 0 10px 0;
 	}
 }
 
@@ -727,22 +737,22 @@ header .filter-elements.show {
 }
 
 .col.full {
-	padding: 0 0.75rem 40px 0.75rem;
+	padding: 0 0.75rem 66px 0.75rem;
 	clear: both;
 }
 
 .col.left {
-	padding: 0 40px 40px 0.75rem;
+	padding: 0 33px 66px 0.75rem;
 }
 .about .col.left {
-	padding: 0 30px 0 0;
+	padding: 0 33px 0 0;
 }
 
 .col.right {
-	padding: 0 0.75rem 40px 40px;
+	padding: 0 0.75rem 66px 33px;
 }
 .about .col.right {
-	padding: 0 0 0 30px;
+	padding: 0 0 0 33px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -779,11 +789,11 @@ header .filter-elements.show {
 }
 
 #bricklayer.two-columns .bricklayer-column:nth-child(odd){
-	padding-left: 25px;
+	padding-left: 33px;
 	padding-right: 0;
 }
 #bricklayer.two-columns .bricklayer-column:nth-child(even){
-	padding-right: 25px;
+	padding-right: 33px;
 	padding-left: 0;
 }
 

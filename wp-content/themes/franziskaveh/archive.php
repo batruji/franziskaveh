@@ -10,17 +10,13 @@
 get_header();
 ?>
 
-<div class="container category-page">
+<div class="container">
 	<?php $active_category = single_cat_title( '', false ); ?>
 	<?php include( locate_template( 'template-parts/navigation.php' ) ); ?>
 
 	<div class="top-header-wrap show valign-wrapper row">
 		<h2>
-			<?php if ( category_description() ):; ?>
-				<?= strip_tags ( category_description() ); ?>
-			<?php else: ?>
-				<?php echo types_render_field( 'all-categories-title', array( 'id' => '32' ) ); ?>
-	        <?php endif; ?>
+			<?= strip_tags ( category_description() ); ?>
 		</h2>
 	</div>
 

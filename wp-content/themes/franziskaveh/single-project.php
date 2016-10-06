@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="container digital project-page">
+<div class="container">
 	<?php include( locate_template( 'template-parts/navigation.php' ) ); ?>
 
 	<div class="top-header-wrap row show">

@@ -167,7 +167,7 @@ add_filter('show_admin_bar', '__return_false');
 function image_sizes_theme_setup() {
 	add_image_size( 'filter-image', 222 );
 	add_image_size( 'one-third', 380 );
-	add_image_size( 'half-size', 590 );
+	add_image_size( 'half-size', 582 );
 	add_image_size( 'full-size', 1230 );
 }
 add_action( 'after_setup_theme', 'image_sizes_theme_setup' );
