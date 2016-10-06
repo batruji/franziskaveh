@@ -49,7 +49,8 @@ get_header(); ?>
 			<div class="<?= $image['image_size'] ?> col s12 <?php if ( $image['image_size'] != 'full' ): ?>l6 m6<?php endif; ?> to-animate">
 				<img src="<?php echo esc_url( $img_src ); ?>"
 					 srcset="<?php echo esc_attr( $img_srcset ); ?>"
-					 alt="<?= $image['image']['alt']; ?>">
+					 alt="<?= $image['image']['alt']; ?>"
+					 sizes="(max-width: <?= $image['image']['sizes'][$size.'-width'] ?>px) 100vw, <?= $image['image']['sizes'][$size.'-width'] ?>px">
 			</div>
 		<?php endforeach; ?>
 	</div>
