@@ -19,7 +19,7 @@ get_header(); ?>
 	<?php include( locate_template( 'template-parts/navigation.php' ) ); ?>
 
 	<div class="top-header-wrap show valign-wrapper row">
-		<h2><?= strip_tags ( types_render_field( 'index-page-title', array( 'id' => '32' ) ) ); ?></h2>
+		<h2><?= strip_tags ( types_render_field( 'index-page-title', array( 'id' => '32' ) ), '<br>' ); ?></h2>
 	</div>
 
 	<!-- Grid layer for displaying projects -->

@@ -16,7 +16,7 @@ get_header();
 
 	<div class="top-header-wrap show valign-wrapper row">
 		<h2>
-			<?= strip_tags ( category_description() ); ?>
+			<?= strip_tags ( category_description(), '<br>' ); ?>
 		</h2>
 	</div>
 

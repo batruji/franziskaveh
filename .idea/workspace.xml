@@ -1,61 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53e3020e-8a0a-44e5-a5e1-41ab2de4ce56" name="Default" comment="Add sizes attribute to Project Gallery images">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/images/admin-icon-settings.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/images/menu-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/screenshot-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/screenshot-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/css/cpt-archive-dd.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/css/cpt.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/js/cpt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/include/cpto-class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/include/functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/include/options.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-cs_CZ.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-cs_CZ.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-de_DE.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-de_DE.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-es_ES.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-es_ES.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-fr_FR.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-fr_FR.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-he_IL.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-he_IL.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-hu_HU.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-hu_HU.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-it_IT.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-it_IT.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-ja_JP.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-ja_JP.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-jp_JP.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-nb_NO.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-nb_NO.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-nl_NL.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-nl_NL.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-pt_BR.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-pt_BR.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-pt_PT.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-pt_PT.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-ro_RO.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-ro_RO.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-sv_SE.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-sv_SE.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-tr_TR.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-tr_TR.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-zh_CN.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order-zh_CN.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/post-types-order.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/languages/post-types-order.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/post-types-order/include/walkers.php" />
+    <list default="true" id="53e3020e-8a0a-44e5-a5e1-41ab2de4ce56" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/template-parts/filters.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/template-parts/filters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/js/franzi-custom.js" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/js/franzi-custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/index.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -82,8 +30,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.903846">
-              <caret line="550" column="26" selection-start-line="550" selection-start-column="26" selection-end-line="550" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.48751837">
+              <caret line="175" column="16" selection-start-line="175" selection-start-column="16" selection-end-line="175" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -102,8 +50,8 @@
       <file leaf-file-name="archive.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -201,8 +149,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.833333">
-              <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
+            <state vertical-scroll-proportion="-13.875">
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
               <folding>
                 <element signature="e#6#418#0#PHP" expanded="true" />
               </folding>
@@ -228,12 +176,12 @@
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-contact.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/archive-jobs.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/template-parts/navigation.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/functions.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/js/franzi-custom.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/template-parts/filters.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
       </list>
     </option>
@@ -579,7 +527,13 @@
       <option name="project" value="LOCAL" />
       <updated>1475749398399</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Multiple changes to theme&#10;&#10;- add post ordering plugin&#10;- all category leads to index page&#10;- underline active category in filters&#10;- fix CSS old classes and replace with body classes&#10;- 66px between half size images and fix their size">
+      <created>1475759385667</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1475759385667</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -618,7 +572,8 @@
     <MESSAGE value="Change order of categories&#10;&#10;And add more space to left and right for main nav buttons" />
     <MESSAGE value="Add proper image sizes site wide&#10;&#10;Also add the ability to have full width images&#10;in project galleries" />
     <MESSAGE value="Add sizes attribute to Project Gallery images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add sizes attribute to Project Gallery images" />
+    <MESSAGE value="Multiple changes to theme&#10;&#10;- add post ordering plugin&#10;- all category leads to index page&#10;- underline active category in filters&#10;- fix CSS old classes and replace with body classes&#10;- 66px between half size images and fix their size" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiple changes to theme&#10;&#10;- add post ordering plugin&#10;- all category leads to index page&#10;- underline active category in filters&#10;- fix CSS old classes and replace with body classes&#10;- 66px between half size images and fix their size" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -981,16 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.833333">
-          <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
-          <folding>
-            <element signature="e#6#418#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.25">
@@ -1011,14 +956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.0">
           <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1058,10 +995,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.875">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="e#6#418#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.903846">
-          <caret line="550" column="26" selection-start-line="550" selection-start-column="26" selection-end-line="550" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.48751837">
+          <caret line="175" column="16" selection-start-line="175" selection-start-column="16" selection-end-line="175" selection-end-column="16" />
           <folding />
         </state>
       </provider>
