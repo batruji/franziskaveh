@@ -26,8 +26,8 @@ get_header();
                     'posts_per_page' => -1,
                     'post_status'    => 'publish',
                     'post_type'      => 'about-client',
-                    'orderby'        => 'date',
-                    'order'          => 'desc',
+                    'orderby'        => 'title',
+                    'order'          => 'asc',
                     'fields'         => 'ids'
                 );
                 $loop = new WP_Query( $args );

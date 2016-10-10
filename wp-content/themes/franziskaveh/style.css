@@ -36,6 +36,10 @@ a {
 	color: #202020;
 }
 
+p a {
+	text-decoration: underline;
+}
+
 .container{
 	max-width: 1230px;
 }

@@ -28,7 +28,15 @@ get_header();
 				$category = strtolower ( single_cat_title( '', false ) );
 				$category_image = get_field( 'category_image_' . $category );
 				if ( $category_image ) {
-					$size = 'one-third';
+					$is_gif_image = false;
+					if ( strpos( wp_get_attachment_image_url( $category_image['id'], 'full' ), '.gif' ) !== false ) {
+						$size = 'full';
+						$is_gif_image = true;
+					}
+					else {
+						$size = 'one-third';
+					}
+
 					$img_src = wp_get_attachment_image_url( $category_image['id'], $size );
 					$img_srcset = wp_get_attachment_image_srcset( $category_image['id'], $size );
 				}
@@ -38,11 +46,15 @@ get_header();
 
 				<?php if ( $category_image ): ?>
 					<img src="<?php echo esc_url( $img_src ); ?>"
-						 srcset="<?php echo esc_attr( $img_srcset ); ?>"
+						 <?php if ( ! $is_gif_image ): ?>srcset="<?php echo esc_attr( $img_srcset ); ?>"<?php endif; ?>
 						 alt="<?= $category_image['alt']; ?>"
-						 sizes="(max-width: <?= $category_image['sizes'][$size.'-width'] ?>px) 100vw, <?= $category_image['sizes'][$size.'-width'] ?>px">
+					 	 <?php if ( ! $is_gif_image ): ?>sizes="(max-width: <?= $category_image['sizes'][$size.'-width'] ?>px) 100vw, <?= $category_image['sizes'][$size.'-width'] ?>px"<?php endif; ?>>
 				<?php else: ?>
-					<?= get_the_post_thumbnail( null, 'one-third' ) ?>
+					<?php if ( strpos( get_the_post_thumbnail_url( null, 'full' ), '.gif' ) !== false ):  ?>
+						<?= get_the_post_thumbnail( null, 'full' ) ?>
+					<?php else: ?>
+						<?= get_the_post_thumbnail( null, 'one-third' ) ?>
+					<?php endif; ?>
 				<?php endif; ?>
 
 				<h4><?php echo types_render_field( 'category-title', array( 'id' => get_the_ID() ) ); ?></h4>

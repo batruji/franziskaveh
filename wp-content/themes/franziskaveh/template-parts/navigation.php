@@ -1,6 +1,9 @@
 <?php
-/** @var $activated */
 /** @var $active_category */
+
+if ( ! isset( $activated ) ) {
+    $activated = '';
+}
 
 $categories = get_categories( array ( 'hide_empty' => 0, 'orderby' => 'id', 'order' => 'asc', 'include' => '2, 3, 4, 5' ) );
 ?>

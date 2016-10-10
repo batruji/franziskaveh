@@ -39,7 +39,15 @@ get_header(); ?>
             while ( $loop->have_posts() ) : $loop->the_post();
                 $home_page_image = get_field( 'home_page_image' );
                 if ( $home_page_image ) {
-                    $size = 'half-size';
+                    $is_gif_image = false;
+                    if ( strpos( wp_get_attachment_image_url( $home_page_image['id'], 'full' ), '.gif' ) !== false ) {
+                        $size = 'full';
+                        $is_gif_image = true;
+                    }
+                    else {
+                        $size = 'half-size';
+                    }
+
                     $img_src = wp_get_attachment_image_url( $home_page_image['id'], $size );
                     $img_srcset = wp_get_attachment_image_srcset( $home_page_image['id'], $size );
                 }
@@ -50,11 +58,15 @@ get_header(); ?>
 
             <?php if ( $home_page_image ): ?>
                 <img src="<?php echo esc_url( $img_src ); ?>"
-                     srcset="<?php echo esc_attr( $img_srcset ); ?>"
+                    <?php if ( ! $is_gif_image ): ?>srcset="<?php echo esc_attr( $img_srcset ); ?>"<?php endif; ?>
                      alt="<?= $home_page_image['alt']; ?>"
-                     sizes="(max-width: <?= $home_page_image['sizes'][$size.'-width'] ?>px) 100vw, <?= $home_page_image['sizes'][$size.'-width'] ?>px">
+                    <?php if ( ! $is_gif_image ): ?>sizes="(max-width: <?= $home_page_image['sizes'][$size.'-width'] ?>px) 100vw, <?= $home_page_image['sizes'][$size.'-width'] ?>px"<?php endif; ?>>
             <?php else: ?>
-                <?= get_the_post_thumbnail( null, 'half-size' ); ?>
+                <?php if ( strpos( get_the_post_thumbnail_url( null, 'full' ), '.gif' ) !== false ):  ?>
+                    <?= get_the_post_thumbnail( null, 'full' ) ?>
+                <?php else: ?>
+                    <?= get_the_post_thumbnail( null, 'half-size' ) ?>
+                <?php endif; ?>
             <?php endif; ?>
 
             <h4><?php echo types_render_field( 'category-title', array( 'id' => get_the_ID() ) ); ?></h4>

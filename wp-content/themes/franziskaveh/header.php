@@ -30,7 +30,8 @@
         .about .projects-component p a:focus,
         #btn-about.activated a,
         .about h4,
-        .about .col p, .about .projects-component {
+        .about .col p, .about .projects-component,
+        .about p a {
             color: <?= $about_page_color ?>;
         }
         #btn-about.activated .bottom-border {

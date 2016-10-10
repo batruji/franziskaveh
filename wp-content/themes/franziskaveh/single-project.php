@@ -21,7 +21,11 @@ get_header(); ?>
 
 	<div class="row">
 		<div class="col s12 l12 m12 pad in-view">
-			<?= get_the_post_thumbnail( null, 'full-size' ) ?>
+			<?php if ( strpos( get_the_post_thumbnail_url( null, 'full' ), '.gif' ) !== false ):  ?>
+				<?= get_the_post_thumbnail( null, 'full' ) ?>
+			<?php else: ?>
+				<?= get_the_post_thumbnail( null, 'full-size' ) ?>
+			<?php endif; ?>
 
 			<div class="type col s12 m12 l12"><?php echo types_render_field( 'category-title', array( 'id' => get_the_ID() ) ); ?></div>
 
@@ -43,14 +47,21 @@ get_header(); ?>
 		<?php foreach ( $images as $image ): ?>
 			<?php
 				$size = $image['image_size'] == 'full' ? 'full-size' : 'half-size';
+
+				$is_gif_image = false;
+				if ( strpos( wp_get_attachment_image_url( $image['image']['id'], 'full' ), '.gif' ) !== false ) {
+					$size = 'full';
+					$is_gif_image = true;
+				}
+
 				$img_src = wp_get_attachment_image_url( $image['image']['id'], $size );
 				$img_srcset = wp_get_attachment_image_srcset( $image['image']['id'], $size );
 			?>
 			<div class="<?= $image['image_size'] ?> col s12 <?php if ( $image['image_size'] != 'full' ): ?>l6 m6<?php endif; ?> to-animate">
 				<img src="<?php echo esc_url( $img_src ); ?>"
-					 srcset="<?php echo esc_attr( $img_srcset ); ?>"
+					 <?php if ( ! $is_gif_image ): ?>srcset="<?php echo esc_attr( $img_srcset ); ?>"<?php endif; ?>
 					 alt="<?= $image['image']['alt']; ?>"
-					 sizes="(max-width: <?= $image['image']['sizes'][$size.'-width'] ?>px) 100vw, <?= $image['image']['sizes'][$size.'-width'] ?>px">
+					 <?php if ( ! $is_gif_image ): ?>sizes="(max-width: <?= $image['image']['sizes'][$size.'-width'] ?>px) 100vw, <?= $image['image']['sizes'][$size.'-width'] ?>px"<?php endif; ?>>
 			</div>
 		<?php endforeach; ?>
 	</div>
