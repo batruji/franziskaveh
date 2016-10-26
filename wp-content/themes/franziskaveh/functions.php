@@ -171,3 +171,17 @@ function image_sizes_theme_setup() {
 	add_image_size( 'full-size', 1230 );
 }
 add_action( 'after_setup_theme', 'image_sizes_theme_setup' );
+
+
+// make sure we display all projects on archive page
+function custom_query_vars_for_archive( $query ) {
+	if ( !is_admin() && $query->is_main_query() ) {
+		if ( is_archive() ) {
+			$query->set( 'posts_per_page', '-1' );
+		}
+	}
+
+	return $query;
+}
+
+add_action( 'pre_get_posts', 'custom_query_vars_for_archive' );
