@@ -87,7 +87,7 @@ $(function(){
                 }
             }else{
                 if(!$('.top-header-wrap').hasClass('show')){
-                    headerText.html('Franziska Veh');
+                    headerText.html('Studio Franziska Veh');
                     $('.top-header-wrap').addClass('show');
                 }
             }

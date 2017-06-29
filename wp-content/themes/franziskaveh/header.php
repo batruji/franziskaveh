@@ -63,7 +63,7 @@
 
 <header>
     <a href="/">
-        <h1 <?= is_singular( 'project' ) ? 'class="fixed"' : '' ?>>Franziska Veh</h1>
+        <h1 <?= is_singular( 'project' ) ? 'class="fixed"' : '' ?>>Studio Franziska Veh</h1>
     </a>
     <?php get_template_part( 'template-parts/filters' ); ?>
 </header>
