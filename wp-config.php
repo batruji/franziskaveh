@@ -1,4 +1,7 @@
 <?php
+/** Enable W3 Total Cache */
+define('WP_CACHE', true); // Added by W3 Total Cache
+
 /**
  * The base configuration for WordPress
  *
@@ -48,14 +51,14 @@ define('FS_METHOD', 'direct');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         'dasfdsfdsagfdsghdsfgdfsgsdtrtyretyr534543');
+define('SECURE_AUTH_KEY',  '3453254345g4trg5ty65y564yffdgsdfgrgfds');
+define('LOGGED_IN_KEY',    'dsafsdgaertgretg5ety546454353244wdsr32r32r432g');
+define('NONCE_KEY',        'vcxvcxbgfnfghjmjhgkgjrthregerty534');
+define('AUTH_SALT',        'czxncldsnbaflbdsfjvbdsofbdslfbadsofiadsu');
+define('SECURE_AUTH_SALT', 'hsEUOfrhgewuofghwefhgweqfduehqgwfewujfbwes');
+define('LOGGED_IN_SALT',   'fojhgweqoufhewohfewofheuoifhgaosuidFHGwaehfd');
+define('NONCE_SALT',       'JDMFASDFJSADK#FJDSPFAJSFPOWQEdkfefoewjfkewop3');
 
 /**#@-*/
 
