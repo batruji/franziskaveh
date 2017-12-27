@@ -4,6 +4,7 @@
  * Public Types hook API.
  *
  * This should be the only point where other plugins (incl. Toolset) interact with Types directly.
+ * Always use as a singleton in production code.
  *
  * Note: Types_Api is initialized on after_setup_theme with priority 10.
  *
@@ -23,16 +24,12 @@ final class Types_Api {
 	private static $instance;
 
 	public static function get_instance() {
-		if( null == self::$instance ) {
+		if ( null == self::$instance ) {
 			self::$instance = new self();
 		}
+
 		return self::$instance;
 	}
-
-	private function __clone() { }
-
-	private function __construct() { }
-
 
 
 	public static function initialize() {
@@ -97,13 +94,36 @@ final class Types_Api {
 		 *
 		 * @since 2.2
 		 */
-		'query_groups' => array( 'args' => 2 )
+		'query_groups' => array( 'args' => 2 ),
+
+
+		/**
+		 * types_filter_get_field_group_ids_by_post_type
+		 *
+		 * Returns all ids of field groups assigned to the given post type.
+		 *
+		 * Note: This is used by CRED (auto complete form).
+		 *
+		 * @param mixed $ignored
+		 * @param string $post_type_slug
+		 *
+		 * @return array Post field group IDs (may come as numeric strings).
+		 *
+		 * @throws InvalidArgumentException when presented with a non-string post type.
+		 *
+		 * @since 2.2.14
+		 */
+		'filter_get_field_group_ids_by_post_type' => array( 'args' => 2 )
 
 	);
 
 
+	/**
+	 * Add API filter hooks (if that wasn't done before).
+	 *
+	 * Reads self::$callbacks for hook definitions and adds older/special hooks.
+	 */
 	private function register_callbacks() {
-
 
 		if( $this->callbacks_registered ) {
 			return;
@@ -117,12 +137,6 @@ final class Types_Api {
 		}
 
 		$this->callbacks_registered = true;
-		
-		/**
-		 * get all field group ids by post type
-		 * @fixme document this, please!
-		 */
-		add_filter( 'types_filter_get_field_group_ids_by_post_type', array( 'Types_Api_Helper', 'get_field_group_ids_by_post_type' ), 10, 2 );
 
 		/**
 		 * types_filter_query_field_definitions
@@ -211,8 +225,8 @@ final class Types_Api {
 	 * @since 2.1
 	 */
 	public function query_field_definitions(
-		/** @noinspection PhpUnusedParameterInspection */ $ignored, $query )
-	{
+		/** @noinspection PhpUnusedParameterInspection */ $ignored, $query
+	) {
 		$domain = wpcf_getarr( $query, 'domain', 'all' );
 
 		if( 'all' == $domain ) {
