@@ -27,6 +27,11 @@ Text Domain: franziskaveh
 	src: url("fonts/Zirkon-Regular.otf");
 }
 
+@font-face {
+	font-family: "Saol";
+	src: url( "fonts/SaolTextRegular.eot");
+	src: url( 'fonts/SaolTextRegular.woff') format( 'woff' );
+}
 
 body {
 	background-color: #fff;
@@ -409,7 +414,7 @@ header .filter-elements.show {
 	margin-bottom: 20px;
 }
 .project-item p {
-	font-family: "Times", sans-serif;
+	font-family: "Saol", sans-serif;
 	text-align: center;
 	font-size: 22px;
 	line-height: 28px;
