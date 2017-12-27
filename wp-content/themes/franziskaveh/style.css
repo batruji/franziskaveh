@@ -579,6 +579,11 @@ body.single-project .col p {
 	font-size: 22px;
 }
 
+body.single-project .col.text-in-gallery,
+body.single-project .col.text-in-gallery p {
+	font-family: "Saol", sans-serif;
+}
+
 body.single-project .credits {
 	margin-bottom: 0;
 	margin-top: 0;

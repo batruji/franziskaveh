@@ -46,23 +46,29 @@ get_header(); ?>
 	<div class="row">
 		<?php foreach ( $images as $image ): ?>
 			<?php
-				$size = $image['image_size'] == 'full' ? 'full-size' : 'half-size';
+				if ( ! $image['full_width_text'] ) :
+					$size = $image['image_size'] == 'full' ? 'full-size' : 'half-size';
 
-				$is_gif_image = false;
-				if ( strpos( wp_get_attachment_image_url( $image['image']['id'], 'full' ), '.gif' ) !== false ) {
-					$size = 'full';
-					$is_gif_image = true;
-				}
+					$is_gif_image = false;
+					if ( strpos( wp_get_attachment_image_url( $image['image']['id'], 'full' ), '.gif' ) !== false ) {
+						$size = 'full';
+						$is_gif_image = true;
+					}
 
-				$img_src = wp_get_attachment_image_url( $image['image']['id'], $size );
-				$img_srcset = wp_get_attachment_image_srcset( $image['image']['id'], $size );
-			?>
-			<div class="<?= $image['image_size'] ?> col s12 <?php if ( $image['image_size'] != 'full' ): ?>l6 m6<?php endif; ?> to-animate">
-				<img src="<?php echo esc_url( $img_src ); ?>"
-					 <?php if ( ! $is_gif_image ): ?>srcset="<?php echo esc_attr( $img_srcset ); ?>"<?php endif; ?>
-					 alt="<?= $image['image']['alt']; ?>"
-					 <?php if ( ! $is_gif_image ): ?>sizes="(max-width: <?= $image['image']['sizes'][$size.'-width'] ?>px) 100vw, <?= $image['image']['sizes'][$size.'-width'] ?>px"<?php endif; ?>>
-			</div>
+					$img_src = wp_get_attachment_image_url( $image['image']['id'], $size );
+					$img_srcset = wp_get_attachment_image_srcset( $image['image']['id'], $size );
+				?>
+				<div class="<?= $image['image_size'] ?> col s12 <?php if ( $image['image_size'] != 'full' ): ?>l6 m6<?php endif; ?> to-animate">
+					<img src="<?php echo esc_url( $img_src ); ?>"
+						 <?php if ( ! $is_gif_image ): ?>srcset="<?php echo esc_attr( $img_srcset ); ?>"<?php endif; ?>
+						 alt="<?= $image['image']['alt']; ?>"
+						 <?php if ( ! $is_gif_image ): ?>sizes="(max-width: <?= $image['image']['sizes'][$size.'-width'] ?>px) 100vw, <?= $image['image']['sizes'][$size.'-width'] ?>px"<?php endif; ?>>
+				</div>
+			<?php else: ?>
+					<div class="full text-in-gallery col s12 to-animate">
+						<?php echo $image['full_width_text'] ?>
+					</div>
+			<?php endif; ?>
 		<?php endforeach; ?>
 	</div>
 
