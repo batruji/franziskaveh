@@ -1,9 +1,9 @@
 <?php
 /*
  * This class will take care of loading bootstrap components buttons and custom buttons added by user
- * Buttons will be visible on pages defined in $this->allowed_pages()
  * 
- * since: Layouts 1.8
+ * @since unknown Layouts 1.8
+ * @since 2.3.3 Addd the Bootstrap Grid component.
  */
 if ( ! class_exists( 'Toolset_CssComponent' ) ) {
 
@@ -16,23 +16,66 @@ if ( ! class_exists( 'Toolset_CssComponent' ) ) {
         const BOOTSTRAP_CSS_DOC_BASE = 'http://getbootstrap.com/css/';
 
         function __construct() {
-                      
-            add_action( 'admin_init', array( $this, 'admin_init' ) );
-            add_action('init', array($this, 'load_dialog_boxes'));
-            
-            add_filter('toolset_add_registered_script', array(&$this, 'add_register_scripts'));
-            add_filter('toolset_add_registered_styles', array(&$this, 'add_register_styles'));
-            add_action('admin_print_scripts', array(&$this, 'admin_enqueue_scripts'));  
-            
+
+
+
+            if(is_admin()){
+                add_action( 'admin_head', array( $this, 'add_bs_component_buttons_to_tinymce' ) );
+                add_action( 'admin_print_scripts', array(&$this, 'admin_enqueue_scripts') );
+            } else {
+                add_action( 'init', array( $this, 'add_bs_component_buttons_to_tinymce' ) );
+                add_action( 'wp_print_scripts', array(&$this, 'admin_enqueue_scripts') );
+            }
+
+            add_action( 'init', array($this, 'load_dialog_boxes')) ;
+            add_filter( 'toolset_add_registered_script', array(&$this, 'add_register_scripts') );
+            add_filter( 'toolset_add_registered_styles', array(&$this, 'add_register_styles') );
+
             add_action( 'wp_ajax_toolset_bs_update_option', array($this, 'toolset_bs_update_option') );
+
         }
-        
+
         public static function getInstance() {
             if( !self::$instance ) {
                 self::$instance = new Toolset_CssComponent();
             }
             
             return self::$instance;
+        }
+
+        function add_bs_component_buttons_to_tinymce() {
+            $allowed_page = $this->is_allowed_page();
+            if(!$allowed_page){
+                return;
+            }
+
+            if ( current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' ) ) {
+                add_filter( 'mce_buttons', array($this,'add_toggle_button') );
+                add_filter( 'mce_buttons_3', array($this,'register_bs_component_tinymce_buttons') );
+                add_filter( 'mce_external_plugins', array($this,'add_bs_component_tinymce_buttons') );
+            }
+        }
+
+        function register_bs_component_tinymce_buttons( $buttons ) {
+            $get_components = $this->all_css_components();
+            foreach($get_components['components'] as $key=>$value){
+                array_push( $buttons, 'css_components_'.$key.'_button' );
+            }
+            foreach($get_components['css'] as $key=>$value){
+                array_push( $buttons, 'css_'.$key.'_button' );
+            }
+
+            foreach($get_components['other'] as $key=>$value){
+                array_push( $buttons, 'css_components_'.$key.'_button' );
+            }
+
+            return $buttons;
+        }
+
+        function add_bs_component_tinymce_buttons( $plugin_array ) {
+
+            $plugin_array['bs_component_buttons_script'] = TOOLSET_COMMON_URL . "/res/js/toolset-bs-component-tinymce.js";
+            return $plugin_array;
         }
 
         function add_toggle_button($buttons)
@@ -44,15 +87,24 @@ if ( ! class_exists( 'Toolset_CssComponent' ) ) {
             return $buttons;
         }
         
-        public function add_register_scripts($scripts){           
+        /**
+		 * Register the Bootstrap component scripts.
+		 *
+		 * @since unknown
+		 * @since 2.3.3 Added the Bootstrap grid component.
+		 */
+
+        public function add_register_scripts($scripts){
             $scripts['toolset-css-component-buttons']	= new Toolset_Script( 'toolset-css-component-buttons', TOOLSET_COMMON_URL . "/res/js/toolset-bs-component-buttons.js", array('jquery'), false );
-            $scripts['toolset-css-component-events']	= new Toolset_Script( 'toolset-css-component-events', TOOLSET_COMMON_URL . "/res/js/toolset-bs-component-events.js", array('jquery'), true );
+            $scripts['toolset-css-component-events']	= new Toolset_Script( 'toolset-css-component-events', TOOLSET_COMMON_URL . "/res/js/toolset-bs-component-events.js", array('jquery', 'toolset-event-manager'), true );
+            $scripts['toolset-css-component-grids']		= new Toolset_Script( 'toolset-css-component-grids', TOOLSET_COMMON_URL . "/res/js/toolset-bs-component-grids.js", array( 'jquery', 'jquery-ui-dialog', 'underscore', 'icl_editor-script', 'toolset-event-manager' ), true );
             return $scripts;
         }
 
         public function add_register_styles($styles){
             $styles['toolset-bs-component-style']	= new Toolset_Style( 'toolset-bs-component-style', TOOLSET_COMMON_URL . '/res/css/toolset-bs-component.css', array(), TOOLSET_VERSION );
             $styles['glyphicons']					= new Toolset_Style( 'glyphicons', TOOLSET_COMMON_URL. '/res/lib/glyphicons/css/glyphicons.css', array(), '3.3.5', 'screen' );
+            $styles['onthego-admin-styles']			= new Toolset_Style( 'onthego-admin-styles', ON_THE_GO_SYSTEMS_BRANDING_REL_PATH .'onthego-styles/onthego-styles.css', array(), TOOLSET_VERSION );
             return $styles;
         }
         
@@ -68,10 +120,18 @@ if ( ! class_exists( 'Toolset_CssComponent' ) ) {
             
             wp_die();
         }
-        
+
+
+		/**
+		 * Enqueue the Bootstrap component scripts.
+		 *
+		 * @since unknown
+		 * @since 2.3.3 Added the Bootstrap grid component.
+		 */
+
         public function admin_enqueue_scripts()
         {
-            
+
             if(!$this->is_allowed_page()){
                 return;
             }
@@ -82,16 +142,25 @@ if ( ! class_exists( 'Toolset_CssComponent' ) ) {
                 'ddl-dialogs-css',
                 'glyphicons'
             ));
+
+            $current_screen = 'front_end';
+            if(is_admin()){
+                $get_screen = get_current_screen();
+                $current_screen = $get_screen->base;
+            }
             
             $get_components = $this->all_css_components();
-            
+
             do_action('toolset_enqueue_scripts', array(
                 'toolset-css-component-buttons',
-                'toolset-css-component-events'
+                'toolset-css-component-events',
+				'toolset-css-component-grids',
+                'toolset-event-manager'
             ));
 
             do_action('toolset_localize_script', 'toolset-css-component-events', 'Toolset_CssComponent', array(
                     'DDL_CSS_JS' => array(
+                        'current_screen' => $current_screen,
                         'available_css' => $get_components['css'],
                         'button_toggle_show' => __('Show Bootstrap buttons','ddl-layouts'),
                         'button_toggle_hide' => __('Hide Bootstrap buttons','ddl-layouts'),
@@ -110,22 +179,141 @@ if ( ! class_exists( 'Toolset_CssComponent' ) ) {
                     ),
                 )
             );
+
+			do_action('toolset_localize_script', 'toolset-css-component-grids', 'Toolset_CssComponent_Grids', array(
+                    'button'	=> array(
+						'label'	=> __( 'Grid', 'toolset-common' )
+					),
+					'dialog'	=> array(
+						'title'		=> __( 'Bootstrap Grid', 'tolset-common' ),
+						'content'	=> $this->get_grid_dialog_content(),
+						'insert'	=> __( 'Insert grid', 'toolset-common' ),
+						'cancel'	=> __( 'Cancel', 'toolset-common' ),
+					)
+                )
+            );
         }
-        
-        
-        // list of allowed pages (only there we will load buttons)
-        public function allowed_pages(){
-            return array('dd_layouts_edit','views-editor','ct-editor','view-archives-editor');
-        }
+
+		/**
+		 * Generate the Botstrap grid dialog content.
+		 *
+		 * @return string Bootstrap dialog content.
+		 *
+		 * @since 2.3.3
+		 */
+
+		public function get_grid_dialog_content() {
+			ob_start();
+			?>
+			<div id="js-toolset-dialog-bootstrap-grid-dialog" class="toolset-shortcode-gui-dialog-container wpv-shortcode-gui-dialog-container">
+				<div class="wpv-dialog">
+                    <div class="toolset-bootstrap-grid-types-container">
+                        <ul class="toolset-bootstrap-grid-types js-toolset-bootstrap-grid-type">
+                            <li>
+                                <figure class="grid-type selected">
+                                    <img class="item-preview" data-name="grid-type-two-even" src="<?php echo TOOLSET_COMMON_URL; ?>/res/images/toolset.bs-component/two-even.png" alt="<?php echo esc_html( __( '2 even columns', 'toolset-common' ) ); ?>">
+                                    <span><?php echo esc_html( __( '2 even columns', 'toolset-common' ) ); ?></span>
+                                </figure>
+                                <label class="radio" data-target="grid-type-two-even" for="grid-type-two-even" style="display:none">
+                                    <input type="radio" name="grid_type" id="grid-type-two-even" value="two-even" checked="checked">
+                                    <?php echo esc_html( __( '2 even columns', 'toolset-common' ) ); ?>
+                                </label>
+                            </li>
+                            <li>
+                                <figure class="grid-type">
+                                    <img class="item-preview" data-name="grid-type-two-uneven" src="<?php echo TOOLSET_COMMON_URL; ?>/res/images/toolset.bs-component/two-uneven-wide-narrow.png" alt="<?php echo esc_html( __( '2 columns (wide and narrow)', 'toolset-common' ) ); ?>">
+                                    <span><?php echo esc_html( __( '2 columns (wide and narrow)', 'toolset-common' ) ); ?></span>
+                                </figure>
+                                <label class="radio" data-target="grid-type-two-uneven" for="grid-type-two-uneven" style="display:none">
+                                    <input type="radio" name="grid_type" id="grid-type-two-uneven" value="two-uneven">
+                                    <?php echo esc_html( __( '2 columns (wide and narrow)', 'toolset-common' ) ); ?>
+                                </label>
+                            </li>
+                            <li>
+                                <figure class="grid-type">
+                                    <img class="item-preview" data-name="grid-type-three-even" src="<?php echo TOOLSET_COMMON_URL; ?>/res/images/toolset.bs-component/three-even.png" alt="<?php echo esc_html( __( '3 even columns', 'toolset-common' ) ); ?>">
+                                    <span><?php echo esc_html( __( '3 even columns', 'toolset-common' ) ); ?></span>
+                                </figure>
+                                <label class="radio" data-target="grid-type-three-even" for="grid-type-three-even" style="display:none">
+                                    <input type="radio" name="grid_type" id="grid-type-three-even" value="three-even">
+                                    <?php echo esc_html( __( '3 even columns', 'toolset-common' ) ); ?>
+                                </label>
+                            </li>
+                            <li>
+                                <figure class="grid-type">
+                                    <img class="item-preview" data-name="grid-type-three-uneven" src="<?php echo TOOLSET_COMMON_URL; ?>/res/images/toolset.bs-component/three-uneven-narrow-wide-narrow.png" alt="<?php echo esc_html( __( '3 columns (1 wide and 2 narrow)', 'toolset-common' ) ); ?>">
+                                    <span><?php echo esc_html( __( '3 columns (1 wide and 2 narrow)', 'toolset-common' ) ); ?></span>
+                                </figure>
+                                <label class="radio" data-target="grid-type-three-uneven" for="grid-type-three-uneven" style="display:none">
+                                    <input type="radio" name="grid_type" id="grid-type-three-uneven" value="three-uneven">
+                                    <?php echo esc_html( __( '3 columns (1 wide and 2 narrow)', 'toolset-common' ) ); ?>
+                                </label>
+                            </li>
+                            <li>
+                                <figure class="grid-type">
+                                    <img class="item-preview" data-name="grid-type-four-even" src="<?php echo TOOLSET_COMMON_URL; ?>/res/images/toolset.bs-component/four-even.png" alt="<?php echo esc_html( __( '4 even columns', 'toolset-common' ) ); ?>">
+                                    <span><?php echo esc_html( __( '4 even columns', 'toolset-common' ) ); ?></span>
+                                </figure>
+                                <label class="radio" data-target="grid-type-four-even" for="grid-type-four-even" style="display:none">
+                                    <input type="radio" name="grid_type" id="grid-type-four-even" value="four-even">
+                                    <?php echo esc_html( __( '4 even columns', 'toolset-common' ) ); ?>
+                                </label>
+                            </li>
+                            <li>
+                                <figure class="grid-type">
+                                    <img class="item-preview" data-name="grid-type-six-even" src="<?php echo TOOLSET_COMMON_URL; ?>/res/images/toolset.bs-component/six-even.png" alt="<?php echo esc_html( __( '6 even columns', 'toolset-common' ) ); ?>">
+                                    <span><?php echo esc_html( __( '6 even columns', 'toolset-common' ) ); ?></span>
+                                </figure>
+                                <label class="radio" data-target="grid-type-six-even" for="grid-type-six-even" style="display:none">
+                                    <input type="radio" name="grid_type" id="grid-type-six-even" value="six-even">
+                                    <?php echo esc_html( __( '6 even columns', 'toolset-common' ) ); ?>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="toolset-bootstrap-grid-types-documentation">
+                        <?php
+                        $url = self::BOOTSTRAP_CSS_DOC_BASE . '#grid';
+                        $doc_link = '<a href="%s" target="_blank">%s</a>';
+                        $doc_link .= '<span style="margin-left: 3px;"></span><a style="text-decoration: none;" target="_blank" href="%s"><i class="icon-external-link fa fa-external-link icon-small"></i></a>';
+
+                        printf( $doc_link, $url, esc_html( __( 'Bootstrap Grid documentation', 'toolset-common' ) ), $url );
+                        ?>
+                    </div>
+				</div>
+			</div>
+			<?php
+			$content = ob_get_clean();
+			return $content;
+		}
+
         
         // check is allowed page currently loaded
         public function is_allowed_page(){
-            
+
+
+            $allowed_screens = array(
+                'toolset_page_views-editor',
+                'toolset_page_ct-editor',
+                'toolset_page_view-archives-editor',
+                'toolset_page_dd_layouts_edit',
+                'page',
+                'post',
+            );
+
+            $allowed_pages = array(
+                'dd_layouts_edit',
+                'views-editor',
+                'ct-editor',
+                'view-archives-editor'
+            );
+
+
+
             $bootstrap_available = false;
-            
-            $bootstrap_version_option = get_option( 'wpv_options' );
-            
-            if(isset($bootstrap_version_option["wpv_bootstrap_version"]) && $bootstrap_version_option["wpv_bootstrap_version"] != "-1"){
+            $bootstrap_version = Toolset_Settings::get_instance();
+
+            if(isset($bootstrap_version->toolset_bootstrap_version) && $bootstrap_version->toolset_bootstrap_version != "-1"){
                 $bootstrap_available = true;
             }
             
@@ -133,34 +321,59 @@ if ( ! class_exists( 'Toolset_CssComponent' ) ) {
                 $bootstrap_available = true;
             }
 
-            $get_page = (isset($_GET['page']) && $_GET['page']) ? sanitize_text_field( $_GET['page'] ) : null;
-            
-            if(!in_array($get_page, $this->allowed_pages()) || $bootstrap_available === false){
-                return false;
+            if(is_admin()){
+
+                $screen_id = '';
+                $screen_base = '';
+                $screen = get_current_screen();
+
+                if(isset($screen)){
+                    $screen_id = $screen->id;
+                    $screen_base = (isset($screen->base)) ? $screen->base : false;
+                }
+
+                if(in_array($screen_id, $allowed_screens) && $bootstrap_available === true){
+                    return true;
+                }
+
+                if(in_array($screen_base, $allowed_screens) && $bootstrap_available === true){
+                    return true;
+                }
+
+                if(isset($_GET['page']) && in_array($_GET['page'], $allowed_pages) && $bootstrap_available === true){
+                    return true;
+                }
+
+
             } else {
-                return true;
+                if ( isset( $_GET['toolset_editor'] ) === true ) {
+                    return true;
+                }
             }
+
+            return false;
+
         }
         
 
-        function admin_init(){
-                 
-            if(!$this->is_allowed_page()){
-                return;
-            }
-
-            // register buttons for tinyMCE
-            add_filter( 'mce_external_plugins', array($this,'toolset_tinymce_register_buttons') );
-            add_filter( "mce_buttons_3", array( $this, "register_buttons_editor_components" ) );
-            add_filter( "mce_buttons_3", array( $this, "register_buttons_editor_css" ) );
-            add_filter( "mce_buttons_3", array( $this, "register_buttons_other" ) );
-            add_filter('mce_buttons', array(&$this, 'add_toggle_button') );
-        }
-
         function load_dialog_boxes(){
-                     
+
+            $post_types = get_post_types(array('_builtin'=>false));
+
             $dialogs = array();
-            $dialogs[] = new WPDDL_CssComponenetDialog( array('toolset_page_views-editor','toolset_page_dd_layouts_edit','toolset_page_view-archives-editor','toolset_page_ct-editor') );
+            $dialogs[] = new WPDDL_CssComponentDialog(
+                array_merge(
+                    array(
+                        'toolset_page_views-editor',
+                        'toolset_page_dd_layouts_edit',
+                        'toolset_page_view-archives-editor',
+                        'toolset_page_ct-editor',
+                        'page',
+                        'post'
+                    ),
+                    $post_types
+                )
+            );
             
             foreach( $dialogs as &$dialog ){
                 add_action('current_screen', array(&$dialog, 'init_screen_render') );
@@ -168,72 +381,6 @@ if ( ! class_exists( 'Toolset_CssComponent' ) ) {
             return $dialogs;
         }
 
-        /*
-         * TinyMCE buttons
-         */
-
-        public function toolset_tinymce_register_buttons(){
-            
-            if(wp_script_is( 'quicktags' )) {
-                //enqueue TinyMCE plugin script with its ID.
-                $get_components = $this->all_css_components();
-                foreach($get_components['components'] as $key=>$value){
-                    $plugin_array["css_components_".$key."_button"] = TOOLSET_COMMON_URL . "/res/js/toolset-bs-component-buttons.js";
-                }
-                foreach($get_components['css'] as $key=>$value){
-                    $plugin_array["css_".$key."_button"] = TOOLSET_COMMON_URL . "/res/js/toolset-bs-component-buttons.js";
-                }
-                
-                foreach($get_components['other'] as $key=>$value){
-                    $plugin_array["other_".$key."_button"] = TOOLSET_COMMON_URL . "/res/js/toolset-bs-component-buttons.js";
-                }
-
-                $plugin_array['css_components_toolbar_toggle'] = TOOLSET_COMMON_URL . "/res/js/toolset-bs-component-buttons.js";
-            }
-
-            return $plugin_array;
-
-        }
-        
-        function register_buttons_editor_components( $buttons ) {
-            if(wp_script_is( 'quicktags' )) {
-                //register buttons with their id.
-                $get_components = $this->all_css_components();
-                foreach($get_components['components'] as $key=>$value){
-                    array_push( $buttons, "css_components_".$key."_button" );
-                }
-
-            }
-
-            return $buttons;
-        }
-
-        function register_buttons_editor_css($buttons){
-            if(wp_script_is( 'quicktags' )) {
-                //register buttons with their id.
-                $get_components = $this->all_css_components();
-                foreach($get_components['css'] as $key=>$value){
-                    array_push( $buttons, "css_".$key."_button" );
-                }			
-            }
-
-            return $buttons;
-        }
-
-        function register_buttons_other($buttons){
-            if(wp_script_is( 'quicktags' )) {
-                //register buttons with their id.
-                $get_components = $this->all_css_components();
-                foreach($get_components['other'] as $key=>$value){
-                    array_push( $buttons, "other_".$key."_button" );
-                }
-
-            }
-
-            return $buttons;
-        }
-
-        /////////////////
 
         function preload_styles(){
             
@@ -241,11 +388,30 @@ if ( ! class_exists( 'Toolset_CssComponent' ) ) {
                 'toolset-bs-component-style',
                 'wp-jquery-ui-dialog',
                 'ddl-dialogs-css',
-                'glyphicons'
+                'glyphicons',
+                'onthego-admin-styles'
             ));
         }
 
+        function is_custom_post_type( $post = NULL )
+        {
+            $all_custom_post_types = get_post_types( array ( '_builtin' => true ) );
 
+            // there are no custom post types
+            if ( empty ( $all_custom_post_types ) ){
+                return false;
+            }
+
+            $custom_types = array_keys( $all_custom_post_types );
+            $current_post_type = get_post_type( $post );
+
+            // could not detect current type
+            if ( ! $current_post_type ){
+                return false;
+            }
+
+            return in_array( $current_post_type, $custom_types );
+        }
 
         public function get_extra_editor_buttons(){
             $additional_buttons = apply_filters('extra_editor_buttons', array());
@@ -340,7 +506,7 @@ if ( ! class_exists( 'Toolset_CssComponent' ) ) {
                         ),
                         'badges' => array(
                             'url' => self::BOOTSTRAP_CSS_COMPONENTS_DOC_BASE.'#badges',
-                            'description' => __('Easily highlight new or unread items by adding a <span class="badge"> to links, Bootstrap navs, and more.','ddl-layouts'),
+                            'description' => __('Easily highlight new or unread items by adding a <span class="badge"></span> to links, Bootstrap navs, and more.','ddl-layouts'),
                             'button_icon' => ' glyphicon glyphicon-certificate ',
                             'button_icon_size' => 'ont-icon-18',
                             'dialog_icon_size' => 'ont-icon-72',
@@ -503,12 +669,17 @@ if ( ! class_exists( 'Toolset_CssComponent' ) ) {
 
     }
 
-    class WPDDL_CssComponenetDialog extends Toolset_DialogBoxes{
+    class WPDDL_CssComponentDialog extends Toolset_DialogBoxes{
       
         function __construct( $screens ){
             parent::__construct( $screens );
+
+            if(!is_admin() && isset($_GET['toolset_editor'])){
+                add_action( 'wp_print_scripts', array( &$this, 'enqueue_scripts' ), 999 );
+                add_action( 'wp_footer', array( &$this, 'template' ) );
+            }
         }
-        
+
         
         public function template(){
             ob_start();?>

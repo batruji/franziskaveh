@@ -73,13 +73,13 @@ final class ITSEC_Lib {
 		}
 
 		//Set up log table
-		$tables = "CREATE TABLE " . $wpdb->prefix . "itsec_log (
+		$tables = "CREATE TABLE " . $wpdb->base_prefix . "itsec_log (
 				log_id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 				log_type varchar(20) NOT NULL DEFAULT '',
 				log_function varchar(255) NOT NULL DEFAULT '',
 				log_priority int(2) NOT NULL DEFAULT 1,
-				log_date datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-				log_date_gmt datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+				log_date datetime NOT NULL DEFAULT '1000-01-01 00:00:00',
+				log_date_gmt datetime NOT NULL DEFAULT '1000-01-01 00:00:00',
 				log_host varchar(40),
 				log_username varchar(60),
 				log_user bigint(20) UNSIGNED,
@@ -92,7 +92,7 @@ final class ITSEC_Lib {
 				) " . $charset_collate . ";";
 
 		//set up lockout table
-		$tables .= "CREATE TABLE " . $wpdb->prefix . "itsec_lockouts (
+		$tables .= "CREATE TABLE " . $wpdb->base_prefix . "itsec_lockouts (
 				lockout_id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 				lockout_type varchar(20) NOT NULL,
 				lockout_start datetime NOT NULL,
@@ -112,7 +112,7 @@ final class ITSEC_Lib {
 				) " . $charset_collate . ";";
 
 		//set up temp table
-		$tables .= "CREATE TABLE " . $wpdb->prefix . "itsec_temp (
+		$tables .= "CREATE TABLE " . $wpdb->base_prefix . "itsec_temp (
 				temp_id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 				temp_type varchar(20) NOT NULL,
 				temp_date datetime NOT NULL,
@@ -127,7 +127,7 @@ final class ITSEC_Lib {
 				KEY temp_username (temp_username)
 				) " . $charset_collate . ";";
 
-		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		@dbDelta( $tables );
 
 	}
@@ -369,6 +369,12 @@ final class ITSEC_Lib {
 			}
 		}
 
+		if ( empty( $ip ) ) {
+			// If an IP is not found, force it to a localhost IP that would not be blacklisted as this typically
+			// indicates a local request that does not provide the localhost IP.
+			$ip = '127.0.0.1';
+		}
+
 		$GLOBALS['__itsec_remote_ip'] = (string) $ip;
 
 		return $GLOBALS['__itsec_remote_ip'];
@@ -517,6 +523,14 @@ final class ITSEC_Lib {
 			$whitelisted_ips[] = ITSEC_Lib::get_ip(); //add current user ip to whitelist
 		}
 
+		if ( ! empty( $_SERVER['SERVER_ADDR'] ) ) {
+			$whitelisted_ips[] = $_SERVER['SERVER_ADDR'];
+		}
+
+		if ( ! empty( $_SERVER['LOCAL_ADDR'] ) ) {
+			$whitelisted_ips[] = $_SERVER['LOCAL_ADDR'];
+		}
+
 		foreach ( $whitelisted_ips as $whitelisted_ip ) {
 			if ( ITSEC_Lib_IP_Tools::intersect( $ip, ITSEC_Lib_IP_Tools::ip_wild_to_ip_cidr( $whitelisted_ip ) ) ) {
 				return true;
@@ -656,8 +670,10 @@ final class ITSEC_Lib {
 		if ( - 1 < $memory_limit ) {
 
 			$unit = strtolower( substr( $memory_limit, - 1 ) );
+			$memory_limit = (int) $memory_limit;
 
 			$new_unit = strtolower( substr( $new_memory_limit, - 1 ) );
+			$new_memory_limit = (int) $new_memory_limit;
 
 			if ( 'm' == $unit ) {
 
@@ -898,5 +914,47 @@ final class ITSEC_Lib {
 		} else {
 			return 'http://www.traceip.net/?query=' . urlencode( $ip );
 		}
+	}
+
+	public static function handle_wp_login_failed( $username ) {
+		$authentication_types = array();
+
+		if ( isset( $_SERVER['HTTP_AUTHORIZATION'] ) ) {
+			$http_auth_type = substr( $_SERVER['HTTP_AUTHORIZATION'], 0, 6 );
+
+			if ( 'Basic ' === $http_auth_type ) {
+				$authentication_types[] = 'header_http_basic_auth';
+			} else if ( 'OAuth ' === $http_auth_type ) {
+				$authentication_types[] = 'header_http_oauth';
+			}
+		}
+
+		if ( isset( $_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW'] ) ) {
+			$authentication_types[] = 'header_http_basic_auth';
+		}
+
+		if ( ! empty( $_GET['oauth_consumer_key'] ) ) {
+			$authentication_types[] = 'query_oauth';
+		}
+
+		if ( ! empty( $_POST['oauth_consumer_key'] ) ) {
+			$authentication_types[] = 'post_oauth';
+		}
+
+		if ( defined('XMLRPC_REQUEST') && XMLRPC_REQUEST ) {
+			$source = 'xmlrpc';
+			$authentication_types = array( 'username_and_password' );
+		} else if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) {
+			$source = 'rest_api';
+			$authentication_types[] = 'cookie';
+		} else {
+			$source = 'wp-login.php';
+			$authentication_types = array( 'username_and_password' );
+		}
+
+		$details = compact( 'source', 'authentication_types' );
+		$details = apply_filters( 'itsec-filter-failed-login-details', $details );
+
+		do_action( 'itsec-handle-failed-login', $username, $details );
 	}
 }

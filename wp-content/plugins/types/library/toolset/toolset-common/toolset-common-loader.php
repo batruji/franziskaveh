@@ -1,15 +1,11 @@
 <?php
 
-if ( class_exists( 'Toolset_Common_Bootstrap' ) ) {
-    return;
-};
-
 if( !defined('TOOLSET_VERSION') ){
-	define('TOOLSET_VERSION', '2.2.6');
+	define('TOOLSET_VERSION', '2.4.2');
 }
 
 if ( ! defined('TOOLSET_COMMON_VERSION' ) ) {
-    define( 'TOOLSET_COMMON_VERSION', '2.2.6' );
+    define( 'TOOLSET_COMMON_VERSION', '2.4.2' );
 }
 
 if ( ! defined('TOOLSET_COMMON_PATH' ) ) {
@@ -67,7 +63,7 @@ if ( ! function_exists( 'toolset_common_boostrap' ) ) {
 		} else {
 			define( 'TOOLSET_COMMON_URL', $url );
 			define( 'TOOLSET_COMMON_PROTOCOL', 'http' ); // DEPRECATED
-		}
+	}
 		if ( is_ssl() ) {
 			define( 'TOOLSET_COMMON_FRONTEND_URL', TOOLSET_COMMON_URL );
 			define( 'TOOLSET_COMMON_FRONTEND_PROTOCOL', 'https' ); // DEPRECATED
@@ -81,6 +77,9 @@ if ( ! function_exists( 'toolset_common_boostrap' ) ) {
     add_action( 'after_setup_theme', 'toolset_common_boostrap' );
 }
 
+/**
+* @todo this should be in the WPML compatibility class :-(
+*/
 
 if( !function_exists('toolset_disable_wpml_admin_lang_switcher') ){
 	add_filter( 'wpml_show_admin_language_switcher', 'toolset_disable_wpml_admin_lang_switcher' );
@@ -104,5 +103,3 @@ if( !function_exists('toolset_disable_wpml_admin_lang_switcher') ){
 	}
 
 }
-
-require_once( TOOLSET_COMMON_PATH . '/user-editors/beta.php' );
