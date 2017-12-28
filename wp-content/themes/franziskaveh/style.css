@@ -499,19 +499,52 @@ header .filter-elements.show {
 }
 
 .about h4 {
-	font-size: 28px;
-	font-family: "Zirkon-Heavy", sans-serif;
-	text-align: center;
+	font-size: 35px;
+	line-height: 58px;
+	font-family: "Saol", sans-serif;
 }
 
-.about .col p, .about .projects-component {
-	font-size: 22px;
-	line-height: 32px;
-	font-family: "Times", sans-serif;
+.about .col p,
+.about .projects-component {
+	font-size: 35px;
+	line-height: 58px;
+	font-family: "Saol", sans-serif;
+}
+
+.about .col p strong,
+.about .projects-component strong {
+	font-family: "Zirkon-Regular", sans-serif;
+	font-weight: 700;
+	font-size: 38px;
+}
+
+.hovered {
+	position: relative;
+	cursor: pointer;
+}
+
+.hovered:hover img {
+	position: absolute;
+	width: auto;
+	height: auto;
+	bottom: 60px;
+	left: 0;
+	display: block!important;
+}
+
+.hovered.hover-right:hover img {
+	right: 0;
+	left: auto;
+}
+
+.hovered.hover-bottom:hover img {
+	bottom: auto;
+	top: 60px;
 }
 
 .about .projects-component {
 	margin: 22px 0;
+	padding: 0;
 }
 
 .about .projects-component p {
@@ -533,7 +566,7 @@ header .filter-elements.show {
 .about .projects-component .title {
 	font-size: 22px;
 	line-height: 32px;
-	font-family: "Times", sans-serif;
+	font-family: "Saol", sans-serif;
 }
 
 @media only screen and (max-width: 600px) {
@@ -541,10 +574,17 @@ header .filter-elements.show {
 		font-size: 17px;
 		line-height: 23px;
 	}
-	.about .col p, .about .projects-component {
+	.about .col p,
+	.about .projects-component {
 		font-size: 16px;
 		line-height: 20px;
 	}
+
+	.about .col p strong,
+	.about .projects-component strong {
+		font-size: 18px;
+	}
+
 	.about .projects-component .title {
 		font-size: 16px;
 		line-height: 20px;

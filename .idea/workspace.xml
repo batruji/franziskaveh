@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53e3020e-8a0a-44e5-a5e1-41ab2de4ce56" name="Default" comment="Update plugins and WP after local reinstall">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/franziskaveh.iml" afterPath="$PROJECT_DIR$/.idea/franziskaveh.iml" />
+    <list default="true" id="53e3020e-8a0a-44e5-a5e1-41ab2de4ce56" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config.php" afterPath="$PROJECT_DIR$/wp-config.php" />
     </list>
     <ignored path="franziskaveh.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,33 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1190476">
-              <caret line="789" column="20" selection-start-line="789" selection-start-column="20" selection-end-line="789" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wp-blog-header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-blog-header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#87#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bricklayer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/js/bricklayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.663522">
+              <caret line="536" column="13" selection-start-line="536" selection-start-column="13" selection-end-line="536" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -79,13 +57,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-home.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page-home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.798122">
-              <caret line="78" column="41" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="41" />
+            <state vertical-scroll-proportion="-7.245283">
+              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding>
                 <element signature="e#6#70#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page-about.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.0754716">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="27" />
+              <folding>
+                <element signature="e#784#1136#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,18 +94,8 @@
       <file leaf-file-name="archive.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.083333">
+            <state vertical-scroll-proportion="-33.125">
               <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="96" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wp-config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.625">
-              <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -125,19 +115,19 @@
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-contact.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/template-parts/filters.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/template-parts/navigation.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/functions.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/archive-jobs.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/js/franzi-custom.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
       </list>
     </option>
   </component>
@@ -631,7 +621,13 @@
       <option name="project" value="LOCAL" />
       <updated>1514465944145</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Remove caching plugin">
+      <created>1514466129464</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1514466129464</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -693,7 +689,8 @@
     <MESSAGE value="Add new font and change display" />
     <MESSAGE value="Add option to add text between gallery images" />
     <MESSAGE value="Add ability to add full width project on home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ability to add full width project on home page" />
+    <MESSAGE value="Remove caching plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove caching plugin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -725,6 +722,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="21" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -790,6 +788,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#784#1136#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -934,25 +935,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="73" selection-start-line="65" selection-start-column="67" selection-end-line="65" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -998,22 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.625">
-          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.083333">
-          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/types/vendor/toolset/types/embedded/frontend.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20419426">
@@ -1048,14 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1190476">
-          <caret line="789" column="20" selection-start-line="789" selection-start-column="20" selection-end-line="789" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/js/franzi-custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.321428">
@@ -1076,11 +1039,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.798122">
-          <caret line="78" column="41" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="41" />
+        <state vertical-scroll-proportion="-7.245283">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
           <folding>
             <element signature="e#6#70#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74101794">
+          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-33.125">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0754716">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="e#784#1136#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.663522">
+          <caret line="536" column="13" selection-start-line="536" selection-start-column="13" selection-end-line="536" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

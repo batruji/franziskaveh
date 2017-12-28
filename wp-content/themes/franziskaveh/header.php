@@ -24,6 +24,7 @@
     ?>
 
     <style>
+        <?php /*
         .about .projects-component p,
         .about .projects-component p a,
         .about .projects-component p a:hover,
@@ -33,9 +34,13 @@
         .about .col p, .about .projects-component,
         .about p a {
             color: <?= $about_page_color ?>;
-        }
+        }*/ ?>
+
         #btn-about.activated .bottom-border {
             background-color: <?= $about_page_color ?>;
+        }
+        #btn-about.activated a {
+            color: <?= $about_page_color ?>;
         }
 
         .contact h2, .contact a,
