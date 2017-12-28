@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53e3020e-8a0a-44e5-a5e1-41ab2de4ce56" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,8 +29,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.663522">
-              <caret line="536" column="13" selection-start-line="536" selection-start-column="13" selection-end-line="536" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.47532895">
+              <caret line="631" column="21" selection-start-line="631" selection-start-column="21" selection-end-line="631" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -40,8 +39,8 @@
       <file leaf-file-name="single-project.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.25">
-              <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+            <state vertical-scroll-proportion="-8.716981">
+              <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -122,11 +121,11 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/archive-jobs.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/js/franzi-custom.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
       </list>
     </option>
@@ -627,7 +626,13 @@
       <option name="project" value="LOCAL" />
       <updated>1514466129464</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Changes to about page&#10;&#10;Ref: https://trello.com/c/YwfBNuHT/9-about-page-update">
+      <created>1514469843990</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1514469843990</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -690,7 +695,8 @@
     <MESSAGE value="Add option to add text between gallery images" />
     <MESSAGE value="Add ability to add full width project on home page" />
     <MESSAGE value="Remove caching plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove caching plugin" />
+    <MESSAGE value="Changes to about page&#10;&#10;Ref: https://trello.com/c/YwfBNuHT/9-about-page-update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes to about page&#10;&#10;Ref: https://trello.com/c/YwfBNuHT/9-about-page-update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1003,14 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25">
-          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-config-sample.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1081,10 +1079,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.716981">
+          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.663522">
-          <caret line="536" column="13" selection-start-line="536" selection-start-column="13" selection-end-line="536" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.47532895">
+          <caret line="631" column="21" selection-start-line="631" selection-start-column="21" selection-end-line="631" selection-end-column="21" />
           <folding />
         </state>
       </provider>

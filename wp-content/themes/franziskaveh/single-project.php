@@ -63,6 +63,7 @@ get_header(); ?>
 						 <?php if ( ! $is_gif_image ): ?>srcset="<?php echo esc_attr( $img_srcset ); ?>"<?php endif; ?>
 						 alt="<?= $image['image']['alt']; ?>"
 						 <?php if ( ! $is_gif_image ): ?>sizes="(max-width: <?= $image['image']['sizes'][$size.'-width'] ?>px) 100vw, <?= $image['image']['sizes'][$size.'-width'] ?>px"<?php endif; ?>>
+					<div class="image-caption"><?php echo $image['image_caption']; ?></div>
 				</div>
 			<?php else: ?>
 					<div class="full text-in-gallery col s12 to-animate">
