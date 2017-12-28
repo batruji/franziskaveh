@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53e3020e-8a0a-44e5-a5e1-41ab2de4ce56" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="franziskaveh.iws" />
@@ -25,21 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.803571">
-              <caret line="580" column="3" selection-start-line="580" selection-start-column="3" selection-end-line="580" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="582" column="2" selection-start-line="582" selection-start-column="2" selection-end-line="582" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single-project.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="single-project.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23474178">
-              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state vertical-scroll-proportion="-4.5283017">
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
               <folding>
                 <marker date="1514471826513" expanded="true" signature="523:674" placeholder="..." />
                 <marker date="1514471826513" expanded="true" signature="635:666" placeholder="..." />
@@ -139,8 +139,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
       </list>
     </option>
   </component>
@@ -658,7 +658,13 @@
       <option name="project" value="LOCAL" />
       <updated>1514471405183</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add ability to set custom background on projects&#10;&#10;Ref: https://trello.com/c/fbl6f38N/8-project-detail-background-color">
+      <created>1514471852151</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1514471852151</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -698,7 +704,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finalize 1st version&#10;&#10;Waiting for feedback to update this one" />
     <MESSAGE value="Small optimizations after validation check" />
     <MESSAGE value="Fix jobs page width on desktop" />
     <MESSAGE value="Change order of categories&#10;&#10;And add more space to left and right for main nav buttons" />
@@ -723,7 +728,8 @@
     <MESSAGE value="Changes to about page&#10;&#10;Ref: https://trello.com/c/YwfBNuHT/9-about-page-update" />
     <MESSAGE value="Add image caption option for projects" />
     <MESSAGE value="A few more style changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="A few more style changes" />
+    <MESSAGE value="Add ability to set custom background on projects&#10;&#10;Ref: https://trello.com/c/fbl6f38N/8-project-detail-background-color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ability to set custom background on projects&#10;&#10;Ref: https://trello.com/c/fbl6f38N/8-project-detail-background-color" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1057,7 +1063,7 @@
         <state vertical-scroll-proportion="-0.625">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#6#87#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1096,14 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.803571">
-          <caret line="580" column="3" selection-start-line="580" selection-start-column="3" selection-end-line="580" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.6415095">
@@ -1116,8 +1114,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23474178">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        <state vertical-scroll-proportion="-4.5283017">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
           <folding>
             <marker date="1514471826513" expanded="true" signature="523:674" placeholder="..." />
             <marker date="1514471826513" expanded="true" signature="635:666" placeholder="..." />
@@ -1134,6 +1132,14 @@
             <marker date="1514471826513" expanded="true" signature="3134:3252" placeholder="..." />
             <marker date="1514471826513" expanded="true" signature="3179:3243" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="582" column="2" selection-start-line="582" selection-start-column="2" selection-end-line="582" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
