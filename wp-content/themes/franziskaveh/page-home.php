@@ -29,7 +29,16 @@ get_header(); ?>
             );
             $loop = new WP_Query( $args );
 
+            $bricklayer_count = 1;
+
             while ( $loop->have_posts() ) : $loop->the_post();
+
+                $is_one_column = types_render_field( 'display-full-width-front-page' ) == '1';
+                // close the current bricklayer 2 column layout
+                if ( $is_one_column ) : ?>
+                    </div>
+                <?php endif;
+
                 $home_page_image = get_field( 'home_page_image' );
                 if ( $home_page_image ) {
                     $is_gif_image = false;
@@ -46,7 +55,7 @@ get_header(); ?>
                 }
                 ?>
 
-                <div class="project-item columns-2 animation-element bounce-up in-view">
+                <div class="project-item columns-2 animation-element bounce-up in-view <?php echo $is_one_column ? 'full-width-project' : '' ?>">
                     <a href="<?= get_the_permalink() ?>" title="<?= the_title() ?>"></a>
 
                     <?php if ( $home_page_image ): ?>
@@ -66,6 +75,12 @@ get_header(); ?>
                     <h2><?= the_title(); ?></h2>
                     <p class="project-info"><?= get_the_excerpt() ?></p>
                 </div>
+
+                <?php if ( $is_one_column ) : ?>
+                    <?php // open a new bricklayer 2 column layout ?>
+                    <div id="bricklayer<?php echo $bricklayer_count; ?>" class="bricklayer two-columns">
+                    <?php $bricklayer_count++; ?>
+                <?php endif; ?>
 
             <?php endwhile; ?>
 
