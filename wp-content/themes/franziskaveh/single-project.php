@@ -7,7 +7,15 @@
  * @package Franziska_Veh
  */
 
-get_header(); ?>
+get_header();
+
+if ( types_render_field( 'custom-background-color' ) ): ?>
+	<style>
+		body {
+			background: <?php echo types_render_field( 'custom-background-color' ); ?>
+		}
+	</style>
+<?php endif; ?>
 
 <div class="container">
 	<?php include( locate_template( 'template-parts/navigation.php' ) ); ?>

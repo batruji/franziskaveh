@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53e3020e-8a0a-44e5-a5e1-41ab2de4ce56" name="Default" comment="Add image caption option for projects">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
+    <list default="true" id="53e3020e-8a0a-44e5-a5e1-41ab2de4ce56" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="franziskaveh.iws" />
@@ -25,22 +25,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6871069">
+            <state vertical-scroll-proportion="-7.803571">
               <caret line="580" column="3" selection-start-line="580" selection-start-column="3" selection-end-line="580" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single-project.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="single-project.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.716981">
-              <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
-              <folding />
+            <state vertical-scroll-proportion="0.23474178">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+              <folding>
+                <marker date="1514471826513" expanded="true" signature="523:674" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="635:666" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="694:795" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="738:795" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="1156:1191" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="1314:1384" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="2514:2539" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="2741:3260" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="2827:3072" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="2836:2971" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="2861:2961" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="3033:3063" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="3134:3252" placeholder="..." />
+                <marker date="1514471826513" expanded="true" signature="3179:3243" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,7 +73,7 @@
       <file leaf-file-name="page-home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.245283">
+            <state vertical-scroll-proportion="-7.6415095">
               <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding>
                 <element signature="e#6#70#0#PHP" expanded="true" />
@@ -124,8 +139,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
       </list>
     </option>
   </component>
@@ -637,7 +652,13 @@
       <option name="project" value="LOCAL" />
       <updated>1514470592713</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="A few more style changes">
+      <created>1514471405183</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1514471405183</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -677,7 +698,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add all assets and implement initial structure" />
     <MESSAGE value="Finalize 1st version&#10;&#10;Waiting for feedback to update this one" />
     <MESSAGE value="Small optimizations after validation check" />
     <MESSAGE value="Fix jobs page width on desktop" />
@@ -702,7 +722,8 @@
     <MESSAGE value="Remove caching plugin" />
     <MESSAGE value="Changes to about page&#10;&#10;Ref: https://trello.com/c/YwfBNuHT/9-about-page-update" />
     <MESSAGE value="Add image caption option for projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add image caption option for projects" />
+    <MESSAGE value="A few more style changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="A few more style changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1041,16 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.245283">
-          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding>
-            <element signature="e#6#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74101794">
@@ -1085,19 +1096,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.716981">
-          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+        <state vertical-scroll-proportion="-7.803571">
+          <caret line="580" column="3" selection-start-line="580" selection-start-column="3" selection-end-line="580" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6871069">
-          <caret line="580" column="3" selection-start-line="580" selection-start-column="3" selection-end-line="580" selection-end-column="3" />
-          <folding />
+        <state vertical-scroll-proportion="-7.6415095">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="e#6#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23474178">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding>
+            <marker date="1514471826513" expanded="true" signature="523:674" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="635:666" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="694:795" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="738:795" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="1156:1191" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="1314:1384" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="2514:2539" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="2741:3260" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="2827:3072" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="2836:2971" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="2861:2961" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="3033:3063" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="3134:3252" placeholder="..." />
+            <marker date="1514471826513" expanded="true" signature="3179:3243" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
