@@ -614,8 +614,19 @@ body.single-project .filter-button, body.single-project .filter-text, body.singl
 }
 body.single-project .col p {
 	text-align: center;
-	font-family: "Times", sans-serif;
+	font-family: "Saol", sans-serif;
 	font-size: 22px;
+}
+
+body.single-project .col.text-in-gallery {
+	width: 100%;
+}
+@media only screen and (min-width: 992px) {
+	body.single-project .col.text-in-gallery {
+		width: 66%;
+		margin: auto;
+		float: none;
+	}
 }
 
 body.single-project .col.text-in-gallery,

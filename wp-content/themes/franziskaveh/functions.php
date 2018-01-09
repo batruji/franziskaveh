@@ -102,7 +102,7 @@ add_action( 'widgets_init', 'franziskaveh_widgets_init' );
  * Enqueue scripts and styles.
  */
 function franziskaveh_scripts() {
-	wp_enqueue_style( 'google-material-icons', 'http://fonts.googleapis.com/icon?family=Material+Icons', false );
+	wp_enqueue_style( 'google-material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', false );
 
 	wp_enqueue_style( 'google-material-icons', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic', false );
 

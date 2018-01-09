@@ -42,7 +42,7 @@ get_header(); ?>
                 $home_page_image = get_field( 'home_page_image' );
                 if ( $home_page_image ) {
                     $is_gif_image = false;
-                    if ( strpos( wp_get_attachment_image_url( $home_page_image['id'], 'full' ), '.gif' ) !== false ) {
+                    if ( strpos( wp_get_attachment_image_url( $home_page_image['id'], 'full' ), '.gif' ) !== false || $is_one_column ) {
                         $size = 'full';
                         $is_gif_image = true;
                     }
@@ -64,7 +64,7 @@ get_header(); ?>
                              alt="<?= $home_page_image['alt']; ?>"
                              <?php if ( ! $is_gif_image ): ?>sizes="(max-width: <?= $home_page_image['sizes'][$size.'-width'] ?>px) 100vw, <?= $home_page_image['sizes'][$size.'-width'] ?>px"<?php endif; ?>>
                     <?php else: ?>
-                        <?php if ( strpos( get_the_post_thumbnail_url( null, 'full' ), '.gif' ) !== false ):  ?>
+                        <?php if ( strpos( get_the_post_thumbnail_url( null, 'full' ), '.gif' ) !== false || $is_one_column ):  ?>
                             <?= get_the_post_thumbnail( null, 'full' ) ?>
                         <?php else: ?>
                             <?= get_the_post_thumbnail( null, 'half-size' ) ?>
