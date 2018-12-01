@@ -11,12 +11,8 @@ Text Domain: franziskaveh
 */
 
 @font-face {
-	font-family: "Zirkon-Heavy";
-	src: url("fonts/zirkon-heavy-webfont.woff");
-}
-@font-face {
-	font-family: "Zirkon-Heavyitalic";
-	src: url("fonts/Zirkon-Heavyitalic.otf");
+	font-family: "GT-Zirkon-Black";
+	src: url("fonts/GT-Zirkon-Black.woff");
 }
 @font-face {
 	font-family: "Zirkon-Light";
@@ -26,7 +22,6 @@ Text Domain: franziskaveh
 	font-family: "Zirkon-Regular";
 	src: url("fonts/Zirkon-Regular.otf");
 }
-
 @font-face {
 	font-family: "Saol";
 	src: url( "fonts/SaolTextRegular.eot");
@@ -58,7 +53,7 @@ p a {
 .main-buttons {
 	text-align: center;
 	color: #202020;
-	font-family: "Zirkon-Heavy", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 40px;
 	line-height: 52px;
 	position: fixed;
@@ -209,7 +204,7 @@ body.home #btn-work .bottom-border {
 	visibility: visible;
 }
 .mobile .controls .controls-btn .button-text {
-	font-family: "Zirkon-Heavy", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 25px;
 }
 
@@ -308,7 +303,7 @@ body.home #btn-work .bottom-border {
 header {
 	text-align: center;
 	color: #202020;
-	font-family: "Zirkon-Heavy", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 28px;
 	margin-top: 20px;
 	position: relative;
@@ -409,7 +404,7 @@ header .filter-elements.show {
 .project-item h2 {
 	font-size: 28px;
 	text-align: center;
-	font-family: "Zirkon-Heavy", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
 	margin-top: 0;
 	margin-bottom: 20px;
 }
@@ -449,7 +444,7 @@ header .filter-elements.show {
 
 .contact h2, .contact a {
 	text-align: center;
-	font-family: "Zirkon-Heavy", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 24px;
 	line-height: 26px;
 }
@@ -513,7 +508,7 @@ header .filter-elements.show {
 
 .about .col p strong,
 .about .projects-component strong {
-	font-family: "Zirkon-Heavy", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 38px;
 }
 
@@ -596,7 +591,7 @@ header .filter-elements.show {
 }
 
 .project-header {
-	font-family: "Zirkon-Heavy", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 28px;
 }
 
@@ -676,7 +671,7 @@ body.single-project .col .type {
     margin-top: 35px;
 }
 .back a {
-	font-family: "Zirkon-Heavy", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 40px;
 }
 .back:hover {
@@ -759,7 +754,7 @@ body.single-project .col .type {
 .top-header-wrap h2.project-header {
 	text-align: center;
 	color: #202020;
-	font-family: "Zirkon-Heavy", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 28px;
 	padding-top: 30px;
 	margin: 0 auto 22px auto;
@@ -977,7 +972,7 @@ body.page-template-default {
 }
 
 body.page-template-default .top-header-wrap h2.col, body.post-type-archive-jobs .top-header-wrap h2.col {
-	font-family: "Zirkon-Heavy", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
 }
 
 .imprint-entry, .jobs-entry {
