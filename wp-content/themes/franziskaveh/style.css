@@ -29,11 +29,12 @@ Text Domain: franziskaveh
 }
 
 body {
-	background-color: #fff;
+	background-color: rgb(28, 28, 28);
+	color: #ffffff;
 }
 
 a {
-	color: #202020;
+	color: #ffffff;
 }
 
 p a {
@@ -52,7 +53,7 @@ p a {
 /* Main buttons ( Work / News / About / Contact) */
 .main-buttons {
 	text-align: center;
-	color: #202020;
+	color: #ffffff;
 	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 40px;
 	line-height: 52px;
@@ -63,7 +64,7 @@ p a {
 	z-index: 250;
 }
 .main-buttons a {
-	color: #202020;
+	color: #ffffff;
 }
 .main-buttons#btn-work {
 	top: 20px;
@@ -124,7 +125,7 @@ p a {
 	display: block;
 	width: 0;
 	height: 2px;
-	background-color: black;
+	background-color: #ffffff;
 	transition: ease all 0.3s;
 }
 
@@ -284,7 +285,7 @@ body.home #btn-work .bottom-border {
 	text-transform: uppercase;
 	font-family: 'Zirkon-Regular', sans-serif;
 	font-size: 14px;
-	color: #202020;
+	color: #ffffff;
 	display: inline-block;
 	letter-spacing: 2px;
 }
@@ -302,7 +303,7 @@ body.home #btn-work .bottom-border {
 
 header {
 	text-align: center;
-	color: #202020;
+	color: #ffffff;
 	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 28px;
 	margin-top: 20px;
@@ -439,7 +440,6 @@ header .filter-elements.show {
 
 .contact {
 	text-align: center;
-	padding-top: 100px;
 }
 
 .contact h2, .contact a {
@@ -450,12 +450,32 @@ header .filter-elements.show {
 }
 
 .contact h4.imprint {
-	font-size: 11px;
-	color: #202020;
+	font-size: 38px;
+	line-height: 52px;
+	color: #ffffff;
 	margin-top: 70px;
+	font-family: "GT-Zirkon-Black", sans-serif;
+	margin-bottom: 6px;
+}
+
+.contact .spotify-link {
+	font-size: 11px;
+	color: #ffffff;
+	text-transform: uppercase;
 	font-family: "Zirkon-Regular", sans-serif;
 	letter-spacing: 2px;
 	margin-bottom: 6px;
+}
+
+.contact .octopus {
+	width: 45px;
+	height: 41px;
+}
+
+#lottie {
+	width: 300px;
+	height: 250px;
+	margin: auto;
 }
 
 .imprint-link {
@@ -484,8 +504,8 @@ header .filter-elements.show {
 
 @media only screen and (min-width: 992px) {
 	.contact h2, .contact a {
-		font-size: 72px;
-		line-height: 78px;
+		font-size: 38px;
+		line-height: 52px;
 	}
 
 	body.category .bricklayer-column {
@@ -494,9 +514,53 @@ header .filter-elements.show {
 }
 
 .about h4 {
-	font-size: 35px;
+	font-size: 52px;
 	line-height: 58px;
-	font-family: "Saol", sans-serif;
+	font-family: "GT-Zirkon-Black", sans-serif;
+}
+
+.about ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.about li {
+	font-size: 16px;
+	line-height: 26px;
+	color: #FBFBFB;
+}
+
+.about li strong {
+	font-family: "GT-Zirkon-Black", sans-serif;
+	font-size: 22px;
+	line-height: 38px;
+}
+
+@media only screen and (min-width: 600px) {
+	.about-text p, .client-projects, .our-services {
+		max-width: 840px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.about-text p.full-width {
+		max-width: 100%;
+	}
+
+	.about ul {
+		float: left;
+		width: 50%;
+	}
+
+	.about li {
+		font-size: 21px;
+		line-height: 32px;
+	}
+
+	.about li strong {
+		font-size: 38px;
+		line-height: 52px;
+	}
 }
 
 .about .col p,
@@ -504,6 +568,10 @@ header .filter-elements.show {
 	font-size: 35px;
 	line-height: 58px;
 	font-family: "Saol", sans-serif;
+}
+
+.about .projects-component:nth-child(2n) {
+	clear: both;
 }
 
 .about .col p strong,
@@ -740,7 +808,7 @@ body.single-project .col .type {
 }
 
 .top-header-wrap h2 {
-	font-family: 'Zirkon-Regular', sans-serif;
+	font-family: "Saol", sans-serif;
 	font-size: 28px;
 	line-height: 32px;
 	text-align: center;
@@ -753,7 +821,7 @@ body.single-project .col .type {
 
 .top-header-wrap h2.project-header {
 	text-align: center;
-	color: #202020;
+	color: #ffffff;
 	font-family: "GT-Zirkon-Black", sans-serif;
 	font-size: 28px;
 	padding-top: 30px;
