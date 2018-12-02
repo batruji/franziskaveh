@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53e3020e-8a0a-44e5-a5e1-41ab2de4ce56" name="Default" comment="Code updates to improve flawed files">
+    <list default="true" id="53e3020e-8a0a-44e5-a5e1-41ab2de4ce56" name="Default" comment="Change Zirkon-Heavy with GT-Zirkon-Black">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/js/materialize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/js/materialize.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" afterDir="false" />
     </list>
     <ignored path="franziskaveh.iws" />
@@ -21,7 +23,7 @@
     <session id="-118027856">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.opened" value="2" />
@@ -29,32 +31,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="1" />
+          <entry key="css" value="2" />
           <entry key="htaccess" value="1" />
-          <entry key="js" value="8" />
-          <entry key="php" value="7" />
+          <entry key="js" value="10" />
+          <entry key="php" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
-          <entry key="JavaScript" value="8" />
-          <entry key="PHP" value="7" />
+          <entry key="CSS" value="2" />
+          <entry key="JavaScript" value="10" />
+          <entry key="PHP" value="10" />
           <entry key="htaccess" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="8" />
-          <entry key="php" value="2" />
-          <entry key="txt" value="87" />
+          <entry key="css" value="15" />
+          <entry key="php" value="6" />
+          <entry key="txt" value="100" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="8" />
-          <entry key="PHP" value="2" />
-          <entry key="PLAIN_TEXT" value="87" />
+          <entry key="CSS" value="15" />
+          <entry key="PHP" value="6" />
+          <entry key="PLAIN_TEXT" value="100" />
         </counts>
       </usages-collector>
     </session>
@@ -64,33 +66,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/uploads/ithemes-security/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-includes/js/crop/cropper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-pro/pro/admin/views/html-options-page.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -114,20 +89,59 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="357">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wordpress-seo/js/dist/select2/i18n/af.js">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="425">
+              <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-includes/css/admin-bar.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="16340" selection-start-line="1" selection-start-column="16340" selection-end-line="1" selection-end-column="16340" />
+              <folding>
+                <element signature="e#11991#12076#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/js/materialize.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="21" selection-start-line="21" selection-end-line="27" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -135,17 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/archive.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="96" />
+            <state>
+              <caret selection-end-line="1496" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -165,9 +170,20 @@
       <find>Zirkon</find>
       <find>&quot;Zirkon-Heavy&quot;</find>
       <find>Zirkon-Heavy</find>
+      <find>GT-Zirkon-Black</find>
+      <find>top-header-wrap</find>
+      <find>#202020</find>
+      <find>background-color</find>
+      <find>rgba</find>
+      <find>#btn-about.activated a</find>
+      <find>202020</find>
+      <find>top-header-wrap show valign-wrapper row</find>
+      <find>����������������������</find>
+      <find>-icon,#wpadminbar .ab-item:before{padding:0}#wpadminbar #wp-admin-bar-customize&gt;.ab-item,#wpadminbar #wp-admin-bar-edit&gt;.ab-item,#wpadminbar #wp-admin-bar-my-account&gt;.ab-</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;GT-Zirkon-Black&quot;</replace>
+      <replace>#ffffff</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -188,7 +204,6 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/archive-jobs.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/js/franzi-custom.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/single-project.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-home.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php" />
@@ -198,6 +213,8 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-pro/assets/js/acf-input.min.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php" />
       </list>
     </option>
   </component>
@@ -257,46 +274,13 @@
             <path>
               <item name="franziskaveh" type="b2602c69:ProjectViewProjectNode" />
               <item name="franziskaveh" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="franziskaveh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="franziskaveh" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="franziskaveh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="franziskaveh" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="franziskaveh" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="franziskaveh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="franziskaveh" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="franziskaveh" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="franziskaveh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="franziskaveh" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="franziskaveh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="franziskaveh" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
-              <item name="ithemes-security" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="franziskaveh" type="b2602c69:ProjectViewProjectNode" />
               <item name="franziskaveh" type="462c0819:PsiDirectoryNode" />
               <item name="wp-includes" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="franziskaveh" type="b2602c69:ProjectViewProjectNode" />
@@ -332,11 +316,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\batru\www\franziskaveh\wp-content\themes\franziskaveh\js" />
       <recent name="C:\Users\batru\www\franziskaveh" />
       <recent name="C:\Users\batru\www\franziskaveh\wp-content\plugins" />
       <recent name="C:\Users\batru\www\franziskaveh\wp-includes" />
       <recent name="C:\Users\batru\www\franziskaveh\wp-content\themes\franziskaveh\fonts" />
-      <recent name="C:\Users\batru\www\franziskaveh\wp-includes\pomo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -376,7 +360,7 @@
       <option name="presentableId" value="Default" />
       <updated>1475587872558</updated>
       <workItem from="1543685146161" duration="2329000" />
-      <workItem from="1543689421689" duration="6340000" />
+      <workItem from="1543689421689" duration="10097000" />
     </task>
     <task id="LOCAL-00001" summary="Add all assets and implement initial structure">
       <created>1475612960021</created>
@@ -588,15 +572,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543696634836</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Change Zirkon-Heavy with GT-Zirkon-Black">
+      <created>1543696935149</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1543696935149</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8669000" />
+    <option name="totallyTimeSpent" value="12426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2224" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -638,7 +628,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add sizes attribute to Project Gallery images" />
     <MESSAGE value="Multiple changes to theme&#10;&#10;- add post ordering plugin&#10;- all category leads to index page&#10;- underline active category in filters&#10;- fix CSS old classes and replace with body classes&#10;- 66px between half size images and fix their size" />
     <MESSAGE value="Small changes after Franzi's feedback email" />
     <MESSAGE value="Add custom fields for Category and Home images" />
@@ -663,19 +652,10 @@
     <MESSAGE value="remove font-weight: 700" />
     <MESSAGE value="Update WP and plugins, install project locally" />
     <MESSAGE value="Code updates to improve flawed files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code updates to improve flawed files" />
+    <MESSAGE value="Change Zirkon-Heavy with GT-Zirkon-Black" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Zirkon-Heavy with GT-Zirkon-Black" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/css/animate.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/screenshot.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -724,13 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -860,23 +833,6 @@
     <entry file="file://$PROJECT_DIR$/wp-settings.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="53" />
-          <folding>
-            <element signature="e#785#1137#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -888,13 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -981,10 +930,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1496" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="357">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/js/materialize.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" selection-start-line="21" selection-end-line="27" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/franziskaveh/page-about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/css/admin-bar.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16340" selection-start-line="1" selection-start-column="16340" selection-end-line="1" selection-end-column="16340" />
+          <folding>
+            <element signature="e#11991#12076#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
