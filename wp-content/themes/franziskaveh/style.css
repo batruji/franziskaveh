@@ -474,8 +474,10 @@ header .filter-elements.show {
 }
 
 .contact .octopus {
-	width: 45px;
-	height: 41px;
+	width: 60px;
+	height: 51px;
+	position: absolute;
+	margin-left: 10px;
 }
 
 #lottie {
