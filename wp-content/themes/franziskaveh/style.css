@@ -28,6 +28,10 @@ Text Domain: franziskaveh
 	src: url( 'fonts/SaolTextRegular.woff') format( 'woff' );
 }
 
+html {
+	font-family: "Saol", sans-serif;
+}
+
 body {
 	background-color: rgb(28, 28, 28);
 	color: #ffffff;
@@ -197,7 +201,7 @@ body.home #btn-work .bottom-border {
 }
 .mobile .controls {
 	position: fixed;
-	background-color: rgba(253, 253, 253, 0.95);
+	background-color: rgba(28, 28, 28, 0.95);
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -246,7 +250,7 @@ body.home #btn-work .bottom-border {
 	margin: 10px 0;
 	position: inherit;
 	transform: rotate(45deg);
-	background: linear-gradient(to bottom, transparent 48%, #2f2f2f 48%, #2f2f2f 52%, transparent 52%), linear-gradient(to right, transparent 48%, #2f2f2f 48%, #2f2f2f 52%, transparent 52%);
+	background: linear-gradient(to bottom, transparent 48%, #D0D0D0 48%, #D0D0D0 52%, transparent 52%), linear-gradient(to right, transparent 48%, #D0D0D0 48%, #D0D0D0 52%, transparent 52%);
 }
 
 @media only screen and (max-width: 600px) {
@@ -647,7 +651,7 @@ header .filter-elements.show {
 	.about .col p,
 	.about .projects-component {
 		font-size: 16px;
-		line-height: 20px;
+		line-height: 23px;
 	}
 
 	.about .col p strong,
@@ -657,7 +661,7 @@ header .filter-elements.show {
 
 	.about .projects-component .title {
 		font-size: 16px;
-		line-height: 20px;
+		line-height: 23px;
 	}
 
 	.about .projects-component p, .about .projects-component p a, .about .projects-component p a:hover, .about .projects-component p a:focus {
@@ -811,7 +815,7 @@ body.single-project .col .type {
 
 @media only screen and (max-width: 600px) {
 	.container{
-		width: 100%;
+		width: calc( 100% - 50px );
 		padding: 0 25px;
 	}
 	.filter-element-item .filter-element-text{
@@ -830,8 +834,8 @@ body.single-project .col .type {
 
 .top-header-wrap h2 {
 	font-family: "Saol", sans-serif;
-	font-size: 28px;
-	line-height: 32px;
+	font-size: 38px;
+	line-height: 52px;
 	text-align: center;
 	padding-top: 92px;
 	padding-bottom: 10px;
@@ -1124,5 +1128,29 @@ body.post-type-archive-jobs {
 	.jobs-entry p, .imprint-entry p {
 		font-size: 14px;
 		line-height: 20px;
+	}
+}
+
+#cookie-law-info-bar {
+	color: #1C1C1C !important;
+	font-family: "GT-Zirkon-Black", sans-serif !important;
+	font-size: 28px;
+	font-weight: bold;
+	padding: 20px 10px;
+}
+
+.cli-plugin-button, .cli-plugin-button:visited {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	padding: 11px 40px;
+	font-size: 25px !important;
+	margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+	#cookie-law-info-bar {
+		font-size: 20px;
+		padding: 10px;
 	}
 }
