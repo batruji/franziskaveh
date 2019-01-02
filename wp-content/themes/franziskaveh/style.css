@@ -41,6 +41,12 @@ p a {
 	text-decoration: underline;
 }
 
+/* used in cookie consent plugin */
+.text-underline {
+	text-decoration: underline;
+	color: inherit;
+}
+
 .container{
 	max-width: 1230px;
 }
@@ -690,11 +696,24 @@ body.single-project .col.text-in-gallery {
 		margin: auto;
 		float: none;
 	}
+
+	body.single-project .col.text-in-gallery.text-bold,
+	body.single-project .col.text-in-gallery.text-bold p {
+		font-size: 52px;
+		line-height: 64px;
+	}
 }
 
 body.single-project .col.text-in-gallery,
 body.single-project .col.text-in-gallery p {
 	font-family: "Saol", sans-serif;
+}
+
+body.single-project .col.text-in-gallery.text-bold,
+body.single-project .col.text-in-gallery.text-bold p {
+	font-family: "GT-Zirkon-Black", sans-serif;
+	font-size: 32px;
+	line-height: 40px;
 }
 
 body.single-project .image-caption {

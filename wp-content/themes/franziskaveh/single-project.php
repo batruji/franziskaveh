@@ -53,6 +53,8 @@ if ( types_render_field( 'custom-background-color' ) ): ?>
 
 	<div class="row">
 		<?php foreach ( $images as $image ): ?>
+			<?php $bold_class = ! empty( $image['text_font'] ) && $image['text_font'] === 'quotes' ? 'text-bold' : '' ?>
+		
 			<?php
 				if ( ! $image['full_width_text'] ) :
 					$size = $image['image_size'] == 'full' ? 'full-size' : 'half-size';
@@ -71,10 +73,10 @@ if ( types_render_field( 'custom-background-color' ) ): ?>
 						 <?php if ( ! $is_gif_image ): ?>srcset="<?php echo esc_attr( $img_srcset ); ?>"<?php endif; ?>
 						 alt="<?= $image['image']['alt']; ?>"
 						 <?php if ( ! $is_gif_image ): ?>sizes="(max-width: <?= $image['image']['sizes'][$size.'-width'] ?>px) 100vw, <?= $image['image']['sizes'][$size.'-width'] ?>px"<?php endif; ?>>
-					<div class="image-caption"><?php echo $image['image_caption']; ?></div>
+					<?php /* <div class="image-caption"><?php echo $image['image_caption']; ?></div> */ ?>
 				</div>
 			<?php else: ?>
-					<div class="full text-in-gallery col s12 to-animate">
+					<div class="full text-in-gallery <?php echo $bold_class; ?> col s12 to-animate">
 						<?php echo $image['full_width_text'] ?>
 					</div>
 			<?php endif; ?>
