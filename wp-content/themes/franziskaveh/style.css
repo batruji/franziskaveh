@@ -342,7 +342,7 @@ header .filter-elements {
 	overflow: auto;
 	white-space: nowrap;
 	width: 100%;
-	background-color: #efefef;
+	background-color: #292929;
 	top: 0;
 	z-index: 2;
 	transform: translateY(-300px);
@@ -1054,9 +1054,11 @@ body.page-template-default .filter-button, body.post-type-archive-jobs .filter-b
 	display: none;
 }
 
+/* was used to make default pages a different colour
 body.page-template-default {
 	background: #c5c6c1;
 }
+*/
 
 body.page-template-default .top-header-wrap h2.col, body.post-type-archive-jobs .top-header-wrap h2.col {
 	font-family: "GT-Zirkon-Black", sans-serif;
@@ -1102,9 +1104,11 @@ body.page-template-default .top-header-wrap h2.col, body.post-type-archive-jobs 
 	cursor: pointer;
 }
 
+/*
 body.post-type-archive-jobs {
 	background: #f5fada;
 }
+*/
 
 @media screen and (max-width: 600px) {
 	.imprint-entry p, .jobs-entry h4 {
